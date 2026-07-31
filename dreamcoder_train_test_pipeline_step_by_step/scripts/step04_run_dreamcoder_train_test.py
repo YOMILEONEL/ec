@@ -295,7 +295,7 @@ try:
         iterations=iterations,
         enumerationTimeout=enum_timeout,
         maximumFrontier=frontier_size,
-        solver="python",
+        solver="ocaml",
         useRecognitionModel=use_recognition,
         noConsolidation=no_consolidation,
         compressor="ocaml",
