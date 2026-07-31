@@ -43,6 +43,27 @@ cpus = sys.argv[13] if len(sys.argv) == 14 else os.environ.get("DREAMCODER_CPUS"
 scripts_dir = pathlib.Path(__file__).resolve().parent
 out_dir.mkdir(parents=True, exist_ok=True)
 
+# Compression/search hyperparameters. Not exposed as positional CLI args (to
+# avoid breaking run_all.sh / the notebook's existing call signature) - read
+# from the environment instead, with defaults matching the official list-domain
+# paper experiments (see the repository's "official_experiments" file), not
+# ecIterator's own much more conservative defaults. Notably ecIterator defaults
+# to arity=0, which means consolidation can only invent closed, zero-argument
+# expressions - no reusable *parameterized* library functions at all. That is
+# very likely why earlier runs found compression candidates but reported
+# "No improvement possible": there was nothing worth inventing under arity=0.
+arity = os.environ.get("DREAMCODER_ARITY", "3")
+pseudo_counts = os.environ.get("DREAMCODER_PSEUDOCOUNTS", "30")
+aic = os.environ.get("DREAMCODER_AIC", "1.0")
+structure_penalty = os.environ.get("DREAMCODER_STRUCTURE_PENALTY", "1.5")
+top_k = os.environ.get("DREAMCODER_TOPK", "2")
+# Recognition training time/steps default to None in ecIterator, which makes
+# it silently fall back to enumerationTimeout - i.e. with a 15s enumeration
+# budget the recognition model only ever gets 15s to train, which is likely
+# too little to learn anything useful. Give it its own budget.
+recognition_timeout = os.environ.get("DREAMCODER_RECOGNITION_TIMEOUT", "")
+recognition_steps = os.environ.get("DREAMCODER_RECOGNITION_STEPS", "")
+
 runner = out_dir / "step04_internal_train_test_runner.py"
 runner.write_text(textwrap.dedent(r'''
 #!/usr/bin/env python3
@@ -69,6 +90,13 @@ use_recognition = sys.argv[11].lower() in {"true", "1", "yes"}
 no_consolidation = sys.argv[12].lower() in {"true", "1", "yes"}
 cpus = int(sys.argv[13])
 scripts_dir = pathlib.Path(sys.argv[14]).resolve()
+arity = int(sys.argv[15])
+pseudo_counts = float(sys.argv[16])
+aic = float(sys.argv[17])
+structure_penalty = float(sys.argv[18])
+top_k = int(sys.argv[19])
+recognition_timeout = float(sys.argv[20]) if sys.argv[20] else None
+recognition_steps = int(sys.argv[21]) if sys.argv[21] else None
 
 output_dir.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(scripts_dir))
@@ -286,6 +314,13 @@ try:
         "use_recognition_model": use_recognition,
         "no_consolidation": no_consolidation,
         "cpus": cpus,
+        "arity": arity,
+        "pseudo_counts": pseudo_counts,
+        "aic": aic,
+        "structure_penalty": structure_penalty,
+        "top_k": top_k,
+        "recognition_timeout": recognition_timeout,
+        "recognition_steps": recognition_steps,
     }
     (output_dir / "step04_setup.json").write_text(json.dumps(setup, indent=2), encoding="utf-8")
     (output_dir / "step04_setup.txt").write_text("\n".join(f"{k}: {v}" for k, v in setup.items()) + "\n", encoding="utf-8")
@@ -305,7 +340,16 @@ try:
         outputPrefix=output_prefix,
         CPUs=cpus,
         cuda=False,
+        arity=arity,
+        pseudoCounts=pseudo_counts,
+        aic=aic,
+        structurePenalty=structure_penalty,
+        topK=top_k,
     )
+    if recognition_timeout is not None:
+        kwargs["recognitionTimeout"] = recognition_timeout
+    if recognition_steps is not None:
+        kwargs["recognitionSteps"] = recognition_steps
 
     # DreamCoder forks differ slightly in accepted keyword arguments.
     # Try the richest configuration first and remove compatibility-sensitive keys if necessary.
@@ -453,6 +497,8 @@ cmd = [
     sys.executable, str(runner), str(train_pickle), str(test_pickle), str(train_spec_json), str(test_spec_json),
     str(out_dir), str(repo_root), str(enum_timeout), str(testing_timeout), str(iterations), str(frontier_size),
     str(use_recognition), str(no_consolidation), str(cpus), str(scripts_dir),
+    str(arity), str(pseudo_counts), str(aic), str(structure_penalty), str(top_k),
+    str(recognition_timeout), str(recognition_steps),
 ]
 print("Running DreamCoder train/test workflow:")
 print(" ".join(cmd))
