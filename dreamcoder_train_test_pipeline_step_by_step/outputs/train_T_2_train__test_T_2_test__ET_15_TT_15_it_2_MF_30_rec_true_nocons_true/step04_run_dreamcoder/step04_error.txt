@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_15_TT_15_it_2_MF_30_rec_true_nocons_true/step04_run_dreamcoder/step04_internal_train_test_runner.py", line 239, in <module>
+    for result in iterator:
+  File "/mnt/c/BA/ec/dreamcoder/dreamcoder.py", line 470, in ecIterator
+    grammar = consolidate(result, grammar, topK=topK, pseudoCounts=pseudoCounts, arity=arity, aic=aic,
+  File "/mnt/c/BA/ec/dreamcoder/dreamcoder.py", line 688, in consolidate
+    grammar, compressionFrontiers = induceGrammar(grammar, compressionFrontiers,
+  File "/mnt/c/BA/ec/dreamcoder/compression.py", line 39, in induceGrammar
+    g, newFrontiers = rustInduce(*args, **kwargs)
+  File "/mnt/c/BA/ec/dreamcoder/compression.py", line 252, in rustInduce
+    p.stdin.write(messageJson)
+BrokenPipeError: [Errno 32] Broken pipe

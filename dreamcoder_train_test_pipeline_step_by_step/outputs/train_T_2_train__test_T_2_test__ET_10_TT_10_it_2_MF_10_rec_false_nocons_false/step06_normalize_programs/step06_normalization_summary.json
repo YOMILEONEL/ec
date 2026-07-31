@@ -1,0 +1,8 @@
+{
+  "tasks": 99,
+  "solved_tasks": 12,
+  "rows_with_unknown_solution_tokens": 0,
+  "unknown_solution_tokens": {},
+  "trivial_solutions": 2,
+  "output_csv": "/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_10_TT_10_it_2_MF_10_rec_false_nocons_false/step06_normalize_programs/step06_normalized_test_programs.csv"
+}

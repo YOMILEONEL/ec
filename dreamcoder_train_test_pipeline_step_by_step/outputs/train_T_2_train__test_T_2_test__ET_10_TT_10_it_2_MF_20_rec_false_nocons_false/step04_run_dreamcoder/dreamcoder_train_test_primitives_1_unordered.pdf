@@ -1,0 +1,5 @@
+digraph {
+	graph [rankdir=LR]
+	f0 [label=<f0=(filter (λ (x) (gt? 0 <br /> x)))>]
+	f1 [label=<f1=(index 0)>]
+}

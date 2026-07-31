@@ -1,0 +1,9 @@
+# DreamCoder's own auto-exported checkpoint pickles. These encode every run
+# parameter into the filename (e.g. "..._aic=1.0_..._topkNotMAP=False_rec=False.pickle"),
+# which exceeds Windows' default 260-character path limit once nested under
+# outputs/<run_key>/step04_run_dreamcoder/. They are also redundant with our
+# own step04_dreamcoder_train_test_result.pkl, which has a normal-length name.
+outputs/**/dreamcoder_train_test_aic=*.pickle
+
+# Jupyter autosave duplicate of the notebook, not useful to version.
+.ipynb_checkpoints/

@@ -1,0 +1,11 @@
+token,count
+++,4
+empty,7
+filter,1
+gt?,1
+mapi,1
+mod,1
+negate,1
+reducei,2
+reverse,3
+sort,3

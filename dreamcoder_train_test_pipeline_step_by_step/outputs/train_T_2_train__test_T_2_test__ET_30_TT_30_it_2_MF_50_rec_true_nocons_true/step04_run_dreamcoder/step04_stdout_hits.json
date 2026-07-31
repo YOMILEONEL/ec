@@ -1,0 +1,2970 @@
+[
+  {
+    "split": "test",
+    "task_name": "test_task_00010__LIST_INT_TAKE_1_0_REVERSE_2",
+    "solution": "(lambda (lambda (reverse $1)))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00018__LIST_LIST_INT_DROP_2_0_ZIPWITH_+_1_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00019__LIST_LIST_INT_DROP_2_1_ZIPWITH_+_3_0",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00056__LIST_MAP_**2_0_FILTER_<0_1",
+    "solution": "(lambda empty)",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00059__LIST_MAP_*-1_0_TAIL_1",
+    "solution": "(lambda (negate (index 0 (reverse $0))))",
+    "log_prior": "-12.664661",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00082__LIST_SCAN1L_max_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00090__LIST_ZIPWITH_-_0_0_MAP__4_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00091__LIST_ZIPWITH_-_0_0_MAXIMUM_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00092__LIST_ZIPWITH_-_0_0_ZIPWITH_+_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00094__LIST_ZIPWITH_max_0_0_TAIL_1",
+    "solution": "(lambda (index 0 (reverse $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00096__LIST_ZIPWITH_min_0_0_FILTER_>0_1",
+    "solution": "(lambda (filter (lambda (gt? $0 0)) $0))",
+    "log_prior": "-12.732835",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00098__LIST_ZIPWITH_min_0_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00025__LIST_FILTER_<0_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00161__LIST_INT_ACCESS_1_0_DROP_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00162__LIST_INT_ACCESS_1_0_TAKE_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00163__LIST_INT_DROP_1_0_COUNT_<0_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00164__LIST_INT_DROP_1_0_COUNT_>0_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00165__LIST_INT_DROP_1_0_COUNT_EVEN_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00166__LIST_INT_DROP_1_0_COUNT_ODD_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00167__LIST_INT_DROP_1_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00168__LIST_INT_DROP_1_0_FILTER_<0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00170__LIST_INT_DROP_1_0_FILTER_EVEN_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00171__LIST_INT_DROP_1_0_FILTER_ODD_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00172__LIST_INT_DROP_1_0_MAP_**2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00173__LIST_INT_DROP_1_0_MAP_*-1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00175__LIST_INT_DROP_1_0_MAP_*3_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00176__LIST_INT_DROP_1_0_MAP_*4_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00177__LIST_INT_DROP_1_0_MAP_+1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00178__LIST_INT_DROP_1_0_MAP_-1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00179__LIST_INT_DROP_1_0_MAP__2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00180__LIST_INT_DROP_1_0_MAP__3_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00181__LIST_INT_DROP_1_0_MAP__4_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00182__LIST_INT_DROP_1_0_REVERSE_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00183__LIST_INT_DROP_1_0_SCAN1L_*_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00184__LIST_INT_DROP_1_0_SCAN1L_+_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00185__LIST_INT_DROP_1_0_SCAN1L_-_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00186__LIST_INT_DROP_1_0_SCAN1L_max_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00188__LIST_INT_DROP_1_0_SORT_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00189__LIST_INT_DROP_1_0_SUM_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00190__LIST_INT_DROP_1_0_TAKE_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00191__LIST_INT_DROP_1_0_ZIPWITH_*_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00193__LIST_INT_DROP_1_0_ZIPWITH_*_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00194__LIST_INT_DROP_1_0_ZIPWITH_+_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00195__LIST_INT_DROP_1_0_ZIPWITH_+_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00196__LIST_INT_DROP_1_0_ZIPWITH_+_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00197__LIST_INT_DROP_1_0_ZIPWITH_-_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00198__LIST_INT_DROP_1_0_ZIPWITH_-_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00199__LIST_INT_DROP_1_0_ZIPWITH_-_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00200__LIST_INT_DROP_1_0_ZIPWITH_max_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00201__LIST_INT_DROP_1_0_ZIPWITH_max_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00202__LIST_INT_DROP_1_0_ZIPWITH_max_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00203__LIST_INT_DROP_1_0_ZIPWITH_min_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00204__LIST_INT_DROP_1_0_ZIPWITH_min_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00205__LIST_INT_DROP_1_0_ZIPWITH_min_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00206__LIST_INT_FILTER_<0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00208__LIST_INT_FILTER_>0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00210__LIST_INT_FILTER_EVEN_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00212__LIST_INT_FILTER_ODD_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00214__LIST_INT_INT_DROP_1_0_DROP_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00215__LIST_INT_INT_DROP_1_0_TAKE_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00216__LIST_INT_INT_DROP_2_0_DROP_1_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00218__LIST_INT_INT_TAKE_1_0_DROP_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00219__LIST_INT_INT_TAKE_1_0_TAKE_2_3",
+    "solution": "(lambda (lambda (lambda (slice 0 $0 $2))))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00220__LIST_INT_INT_TAKE_2_0_DROP_1_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00221__LIST_INT_INT_TAKE_2_0_TAKE_1_3",
+    "solution": "(lambda (lambda (lambda (slice 0 $1 $2))))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00222__LIST_INT_MAP_**2_0_ACCESS_1_2",
+    "solution": "(lambda (lambda (* $0 $0)))",
+    "log_prior": "-7.917172",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00223__LIST_INT_MAP_**2_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00225__LIST_INT_MAP_*-1_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00226__LIST_INT_MAP_*-1_0_TAKE_1_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda (negate $0))) $1)))",
+    "log_prior": "-11.346540",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00227__LIST_INT_MAP_*2_0_ACCESS_1_2",
+    "solution": "(lambda (lambda (* (index $0 $1) 2)))",
+    "log_prior": "-13.041136",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00228__LIST_INT_MAP_*2_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00229__LIST_INT_MAP_*3_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00231__LIST_INT_MAP_*4_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00237__LIST_INT_MAP__2_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00239__LIST_INT_MAP__3_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00241__LIST_INT_MAP__4_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00243__LIST_INT_REVERSE_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00244__LIST_INT_SCAN1L_*_0_ACCESS_1_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00245__LIST_INT_SCAN1L_*_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00246__LIST_INT_SCAN1L_+_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00248__LIST_INT_SCAN1L_-_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00249__LIST_INT_SCAN1L_max_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00250__LIST_INT_SCAN1L_min_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00252__LIST_INT_SORT_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00258__LIST_INT_TAKE_1_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00263__LIST_INT_TAKE_1_0_HEAD_2",
+    "solution": "(lambda (lambda (index 0 $1)))",
+    "log_prior": "-7.763021",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00265__LIST_INT_TAKE_1_0_MAP_*-1_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda (negate $0))) $1)))",
+    "log_prior": "-11.346540",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00273__LIST_INT_TAKE_1_0_MAXIMUM_2",
+    "solution": "(lambda (lambda (index 0 (reverse (sort $1)))))",
+    "log_prior": "-12.732835",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00277__LIST_INT_TAKE_1_0_SORT_2",
+    "solution": "(lambda (lambda (sort $1)))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00278__LIST_INT_TAKE_1_0_SUM_2",
+    "solution": "(lambda (lambda (sum $1)))",
+    "log_prior": "-5.123964",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00279__LIST_INT_TAKE_1_0_TAIL_2",
+    "solution": "(lambda (lambda (index 0 (reverse $1))))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00280__LIST_INT_TAKE_1_0_TAKE_1_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00286__LIST_INT_TAKE_1_0_ZIPWITH_-_2_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda 0)) $1)))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00287__LIST_INT_TAKE_1_0_ZIPWITH_max_0_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00288__LIST_INT_TAKE_1_0_ZIPWITH_max_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00289__LIST_INT_TAKE_1_0_ZIPWITH_max_2_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00290__LIST_INT_TAKE_1_0_ZIPWITH_min_0_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00291__LIST_INT_TAKE_1_0_ZIPWITH_min_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00292__LIST_INT_TAKE_1_0_ZIPWITH_min_2_2",
+    "solution": "(lambda (lambda (slice 0 $0 $1)))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00293__LIST_INT_ZIPWITH_*_0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00296__LIST_INT_ZIPWITH_-_0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00297__LIST_INT_ZIPWITH_-_0_0_TAKE_1_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda 0)) $1)))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00298__LIST_INT_ZIPWITH_max_0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00299__LIST_INT_ZIPWITH_max_0_0_TAKE_1_2",
+    "solution": "(lambda (lambda (slice 0 $0 $1)))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00300__LIST_INT_ZIPWITH_min_0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00301__LIST_INT_ZIPWITH_min_0_0_TAKE_1_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00403__LIST_LIST_INT_ACCESS_2_0_DROP_3_1",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00404__LIST_LIST_INT_ACCESS_2_0_TAKE_3_1",
+    "solution": "(lambda (lambda (lambda $1)))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00405__LIST_LIST_INT_ACCESS_2_1_DROP_3_0",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00406__LIST_LIST_INT_ACCESS_2_1_TAKE_3_0",
+    "solution": "(lambda (lambda (lambda $2)))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00427__LIST_LIST_INT_ZIPWITH_*_0_1_DROP_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00430__LIST_LIST_INT_ZIPWITH_*_1_0_DROP_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00879__LIST_LIST_MAXIMUM_0_DROP_2_1",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00880__LIST_LIST_MAXIMUM_0_TAKE_2_1",
+    "solution": "(lambda (lambda $0))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00881__LIST_LIST_MAXIMUM_1_DROP_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00882__LIST_LIST_MAXIMUM_1_TAKE_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00883__LIST_LIST_MINIMUM_0_ACCESS_2_1",
+    "solution": "(lambda (lambda (index 5 $0)))",
+    "log_prior": "-8.307953",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00887__LIST_LIST_MINIMUM_1_DROP_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01023__LIST_LIST_SUM_0_DROP_2_1",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01024__LIST_LIST_SUM_0_TAKE_2_1",
+    "solution": "(lambda (lambda $0))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01025__LIST_LIST_SUM_1_DROP_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01026__LIST_LIST_SUM_1_TAKE_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01058__LIST_LIST_ZIPWITH_*_0_1_SCAN1L_*_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda 0)) $0)))",
+    "log_prior": "-8.302018",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01591__LIST_MAP_**2_0_COUNT_<0_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01625__LIST_MAP_**2_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01626__LIST_MAP_**2_0_ZIPWITH_min_0_1",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01627__LIST_MAP_**2_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01633__LIST_MAP_*-1_0_HEAD_1",
+    "solution": "(lambda (negate (index 0 $0)))",
+    "log_prior": "-10.179755",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01642__LIST_MAP_*-1_0_MAXIMUM_1",
+    "solution": "(lambda (negate (index 0 (sort $0))))",
+    "log_prior": "-12.664661",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01650__LIST_MAP_*-1_0_SUM_1",
+    "solution": "(lambda (negate (sum $0)))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01657__LIST_MAP_*-1_0_ZIPWITH_max_1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01660__LIST_MAP_*-1_0_ZIPWITH_min_1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01663__LIST_MAP_*2_0_COUNT_EVEN_1",
+    "solution": "(lambda (sum (mapi (lambda (lambda 1)) $0)))",
+    "log_prior": "-10.173820",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01666__LIST_MAP_*2_0_HEAD_1",
+    "solution": "(lambda (* (index 0 $0) 2))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01681__LIST_MAP_*2_0_SUM_1",
+    "solution": "(lambda (sum (++ $0 $0)))",
+    "log_prior": "-10.019669",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01686__LIST_MAP_*2_0_ZIPWITH_-_0_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01697__LIST_MAP_*3_0_HEAD_1",
+    "solution": "(lambda (* (index 0 $0) 3))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01714__LIST_MAP_*3_0_SUM_1",
+    "solution": "(lambda (* (sum $0) 3))",
+    "log_prior": "-10.179755",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01723__LIST_MAP_*3_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01728__LIST_MAP_*4_0_COUNT_EVEN_1",
+    "solution": "(lambda (sum (mapi (lambda (lambda 1)) $0)))",
+    "log_prior": "-10.173820",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01729__LIST_MAP_*4_0_COUNT_ODD_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01733__LIST_MAP_*4_0_HEAD_1",
+    "solution": "(lambda (* (index 0 $0) 4))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01750__LIST_MAP_*4_0_SUM_1",
+    "solution": "(lambda (* (sum $0) 4))",
+    "log_prior": "-10.179755",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01756__LIST_MAP_*4_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01768__LIST_MAP_+1_0_HEAD_1",
+    "solution": "(lambda (+ (index 0 $0) 1))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01794__LIST_MAP_+1_0_ZIPWITH_-_0_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate 1))) $0))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01795__LIST_MAP_+1_0_ZIPWITH_-_1_0",
+    "solution": "(lambda (mapi (lambda (lambda 1)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01827__LIST_MAP_-1_0_ZIPWITH_-_0_1",
+    "solution": "(lambda (mapi (lambda (lambda 1)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01828__LIST_MAP_-1_0_ZIPWITH_-_1_0",
+    "solution": "(lambda (mapi (lambda (lambda (negate 1))) $0))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01929__LIST_MAP__4_0_SCAN1L_*_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01949__LIST_MINIMUM_0_ACCESS_1_0",
+    "solution": "(lambda (index 4 (reverse $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01963__LIST_REVERSE_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01969__LIST_REVERSE_0_SORT_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01970__LIST_REVERSE_0_SUM_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01971__LIST_REVERSE_0_TAIL_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01981__LIST_REVERSE_0_ZIPWITH_max_1_1",
+    "solution": "(lambda (reverse $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01984__LIST_REVERSE_0_ZIPWITH_min_1_1",
+    "solution": "(lambda (reverse $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01993__LIST_SCAN1L_*_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02001__LIST_SCAN1L_*_0_MAP__2_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02005__LIST_SCAN1L_*_0_MINIMUM_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02013__LIST_SCAN1L_*_0_SUM_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02014__LIST_SCAN1L_*_0_TAIL_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02023__LIST_SCAN1L_*_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02026__LIST_SCAN1L_*_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02027__LIST_SCAN1L_*_0_ZIPWITH_min_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02036__LIST_SCAN1L_+_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02048__LIST_SCAN1L_+_0_SCAN1L_*_1",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02055__LIST_SCAN1L_+_0_TAIL_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02064__LIST_SCAN1L_+_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02078__LIST_SCAN1L_-_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02091__LIST_SCAN1L_-_0_SCAN1L_*_1",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02106__LIST_SCAN1L_-_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02120__LIST_SCAN1L_max_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02130__LIST_SCAN1L_max_0_MINIMUM_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02152__LIST_SCAN1L_min_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02162__LIST_SCAN1L_min_0_MAXIMUM_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02163__LIST_SCAN1L_min_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02171__LIST_SCAN1L_min_0_TAIL_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02190__LIST_SORT_0_HEAD_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02202__LIST_SORT_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02203__LIST_SORT_0_REVERSE_1",
+    "solution": "(lambda (reverse (sort $0)))",
+    "log_prior": "-7.454720",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02207__LIST_SORT_0_SCAN1L_max_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02209__LIST_SORT_0_SORT_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02210__LIST_SORT_0_SUM_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02220__LIST_SORT_0_ZIPWITH_max_1_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02223__LIST_SORT_0_ZIPWITH_min_1_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02224__LIST_SUM_0_DROP_1_0",
+    "solution": "(lambda empty)",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02225__LIST_SUM_0_TAKE_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02228__LIST_ZIPWITH_*_0_0_COUNT_<0_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02262__LIST_ZIPWITH_*_0_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02263__LIST_ZIPWITH_*_0_0_ZIPWITH_min_0_1",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02264__LIST_ZIPWITH_*_0_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02267__LIST_ZIPWITH_+_0_0_COUNT_EVEN_1",
+    "solution": "(lambda (sum (mapi (lambda (lambda 1)) $0)))",
+    "log_prior": "-10.173820",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02270__LIST_ZIPWITH_+_0_0_HEAD_1",
+    "solution": "(lambda (* (index 0 $0) 2))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02285__LIST_ZIPWITH_+_0_0_SUM_1",
+    "solution": "(lambda (sum (++ $0 $0)))",
+    "log_prior": "-10.019669",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02290__LIST_ZIPWITH_+_0_0_ZIPWITH_-_0_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02293__LIST_ZIPWITH_-_0_0_COUNT_EVEN_1",
+    "solution": "(lambda (sum (mapi (lambda (lambda 1)) $0)))",
+    "log_prior": "-10.173820",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02294__LIST_ZIPWITH_-_0_0_MAP_+1_1",
+    "solution": "(lambda (mapi (lambda (lambda 1)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02295__LIST_ZIPWITH_-_0_0_MAP_-1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate 1))) $0))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02296__LIST_ZIPWITH_-_0_0_ZIPWITH_-_1_0",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02306__LIST_ZIPWITH_max_0_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02307__LIST_ZIPWITH_max_0_0_MAP_*-1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02312__LIST_ZIPWITH_max_0_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02313__LIST_ZIPWITH_max_0_0_REVERSE_1",
+    "solution": "(lambda (reverse $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02318__LIST_ZIPWITH_max_0_0_SORT_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02319__LIST_ZIPWITH_max_0_0_SUM_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02325__LIST_ZIPWITH_min_0_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02326__LIST_ZIPWITH_min_0_0_MAP_*-1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02331__LIST_ZIPWITH_min_0_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02332__LIST_ZIPWITH_min_0_0_REVERSE_1",
+    "solution": "(lambda (reverse $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02337__LIST_ZIPWITH_min_0_0_SORT_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02338__LIST_ZIPWITH_min_0_0_SUM_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00010__LIST_INT_TAKE_1_0_REVERSE_2",
+    "solution": "(lambda (lambda (reverse $1)))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00018__LIST_LIST_INT_DROP_2_0_ZIPWITH_+_1_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00019__LIST_LIST_INT_DROP_2_1_ZIPWITH_+_3_0",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00056__LIST_MAP_**2_0_FILTER_<0_1",
+    "solution": "(lambda empty)",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00059__LIST_MAP_*-1_0_TAIL_1",
+    "solution": "(lambda (negate (index 0 (reverse $0))))",
+    "log_prior": "-12.664661",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00082__LIST_SCAN1L_max_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00090__LIST_ZIPWITH_-_0_0_MAP__4_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00091__LIST_ZIPWITH_-_0_0_MAXIMUM_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00092__LIST_ZIPWITH_-_0_0_ZIPWITH_+_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00094__LIST_ZIPWITH_max_0_0_TAIL_1",
+    "solution": "(lambda (index 0 (reverse $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00096__LIST_ZIPWITH_min_0_0_FILTER_>0_1",
+    "solution": "(lambda (filter (lambda (gt? $0 0)) $0))",
+    "log_prior": "-12.732835",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "test",
+    "task_name": "test_task_00098__LIST_ZIPWITH_min_0_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00025__LIST_FILTER_<0_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00161__LIST_INT_ACCESS_1_0_DROP_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00162__LIST_INT_ACCESS_1_0_TAKE_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00163__LIST_INT_DROP_1_0_COUNT_<0_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00164__LIST_INT_DROP_1_0_COUNT_>0_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00165__LIST_INT_DROP_1_0_COUNT_EVEN_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00166__LIST_INT_DROP_1_0_COUNT_ODD_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00167__LIST_INT_DROP_1_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00168__LIST_INT_DROP_1_0_FILTER_<0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00170__LIST_INT_DROP_1_0_FILTER_EVEN_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00171__LIST_INT_DROP_1_0_FILTER_ODD_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00172__LIST_INT_DROP_1_0_MAP_**2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00173__LIST_INT_DROP_1_0_MAP_*-1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00175__LIST_INT_DROP_1_0_MAP_*3_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00176__LIST_INT_DROP_1_0_MAP_*4_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00177__LIST_INT_DROP_1_0_MAP_+1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00178__LIST_INT_DROP_1_0_MAP_-1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00179__LIST_INT_DROP_1_0_MAP__2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00180__LIST_INT_DROP_1_0_MAP__3_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00181__LIST_INT_DROP_1_0_MAP__4_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00182__LIST_INT_DROP_1_0_REVERSE_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00183__LIST_INT_DROP_1_0_SCAN1L_*_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00184__LIST_INT_DROP_1_0_SCAN1L_+_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00185__LIST_INT_DROP_1_0_SCAN1L_-_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00186__LIST_INT_DROP_1_0_SCAN1L_max_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00188__LIST_INT_DROP_1_0_SORT_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00189__LIST_INT_DROP_1_0_SUM_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00190__LIST_INT_DROP_1_0_TAKE_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00191__LIST_INT_DROP_1_0_ZIPWITH_*_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00193__LIST_INT_DROP_1_0_ZIPWITH_*_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00194__LIST_INT_DROP_1_0_ZIPWITH_+_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00195__LIST_INT_DROP_1_0_ZIPWITH_+_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00196__LIST_INT_DROP_1_0_ZIPWITH_+_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00197__LIST_INT_DROP_1_0_ZIPWITH_-_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00198__LIST_INT_DROP_1_0_ZIPWITH_-_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00199__LIST_INT_DROP_1_0_ZIPWITH_-_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00200__LIST_INT_DROP_1_0_ZIPWITH_max_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00201__LIST_INT_DROP_1_0_ZIPWITH_max_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00202__LIST_INT_DROP_1_0_ZIPWITH_max_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00203__LIST_INT_DROP_1_0_ZIPWITH_min_0_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00204__LIST_INT_DROP_1_0_ZIPWITH_min_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00205__LIST_INT_DROP_1_0_ZIPWITH_min_2_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00206__LIST_INT_FILTER_<0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00208__LIST_INT_FILTER_>0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00210__LIST_INT_FILTER_EVEN_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00212__LIST_INT_FILTER_ODD_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00214__LIST_INT_INT_DROP_1_0_DROP_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00215__LIST_INT_INT_DROP_1_0_TAKE_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00216__LIST_INT_INT_DROP_2_0_DROP_1_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00218__LIST_INT_INT_TAKE_1_0_DROP_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00219__LIST_INT_INT_TAKE_1_0_TAKE_2_3",
+    "solution": "(lambda (lambda (lambda (slice 0 $0 $2))))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00220__LIST_INT_INT_TAKE_2_0_DROP_1_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00221__LIST_INT_INT_TAKE_2_0_TAKE_1_3",
+    "solution": "(lambda (lambda (lambda (slice 0 $1 $2))))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00222__LIST_INT_MAP_**2_0_ACCESS_1_2",
+    "solution": "(lambda (lambda (* $0 $0)))",
+    "log_prior": "-7.917172",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00223__LIST_INT_MAP_**2_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00225__LIST_INT_MAP_*-1_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00226__LIST_INT_MAP_*-1_0_TAKE_1_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda (negate $0))) $1)))",
+    "log_prior": "-11.346540",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00227__LIST_INT_MAP_*2_0_ACCESS_1_2",
+    "solution": "(lambda (lambda (* (index $0 $1) 2)))",
+    "log_prior": "-13.041136",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00228__LIST_INT_MAP_*2_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00229__LIST_INT_MAP_*3_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00231__LIST_INT_MAP_*4_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00237__LIST_INT_MAP__2_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00239__LIST_INT_MAP__3_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00241__LIST_INT_MAP__4_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00243__LIST_INT_REVERSE_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00244__LIST_INT_SCAN1L_*_0_ACCESS_1_2",
+    "solution": "(lambda (lambda 0))",
+    "log_prior": "-2.639057",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00245__LIST_INT_SCAN1L_*_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00246__LIST_INT_SCAN1L_+_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00248__LIST_INT_SCAN1L_-_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00249__LIST_INT_SCAN1L_max_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00250__LIST_INT_SCAN1L_min_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00252__LIST_INT_SORT_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00258__LIST_INT_TAKE_1_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00263__LIST_INT_TAKE_1_0_HEAD_2",
+    "solution": "(lambda (lambda (index 0 $1)))",
+    "log_prior": "-7.763021",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00265__LIST_INT_TAKE_1_0_MAP_*-1_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda (negate $0))) $1)))",
+    "log_prior": "-11.346540",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00273__LIST_INT_TAKE_1_0_MAXIMUM_2",
+    "solution": "(lambda (lambda (index 0 (reverse (sort $1)))))",
+    "log_prior": "-12.732835",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00277__LIST_INT_TAKE_1_0_SORT_2",
+    "solution": "(lambda (lambda (sort $1)))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00278__LIST_INT_TAKE_1_0_SUM_2",
+    "solution": "(lambda (lambda (sum $1)))",
+    "log_prior": "-5.123964",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00279__LIST_INT_TAKE_1_0_TAIL_2",
+    "solution": "(lambda (lambda (index 0 (reverse $1))))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00280__LIST_INT_TAKE_1_0_TAKE_1_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00286__LIST_INT_TAKE_1_0_ZIPWITH_-_2_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda 0)) $1)))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00287__LIST_INT_TAKE_1_0_ZIPWITH_max_0_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00288__LIST_INT_TAKE_1_0_ZIPWITH_max_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00289__LIST_INT_TAKE_1_0_ZIPWITH_max_2_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00290__LIST_INT_TAKE_1_0_ZIPWITH_min_0_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00291__LIST_INT_TAKE_1_0_ZIPWITH_min_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00292__LIST_INT_TAKE_1_0_ZIPWITH_min_2_2",
+    "solution": "(lambda (lambda (slice 0 $0 $1)))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00293__LIST_INT_ZIPWITH_*_0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00296__LIST_INT_ZIPWITH_-_0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00297__LIST_INT_ZIPWITH_-_0_0_TAKE_1_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda 0)) $1)))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00298__LIST_INT_ZIPWITH_max_0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00299__LIST_INT_ZIPWITH_max_0_0_TAKE_1_2",
+    "solution": "(lambda (lambda (slice 0 $0 $1)))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00300__LIST_INT_ZIPWITH_min_0_0_DROP_1_2",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00301__LIST_INT_ZIPWITH_min_0_0_TAKE_1_2",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00403__LIST_LIST_INT_ACCESS_2_0_DROP_3_1",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00404__LIST_LIST_INT_ACCESS_2_0_TAKE_3_1",
+    "solution": "(lambda (lambda (lambda $1)))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00405__LIST_LIST_INT_ACCESS_2_1_DROP_3_0",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00406__LIST_LIST_INT_ACCESS_2_1_TAKE_3_0",
+    "solution": "(lambda (lambda (lambda $2)))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00427__LIST_LIST_INT_ZIPWITH_*_0_1_DROP_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00430__LIST_LIST_INT_ZIPWITH_*_1_0_DROP_2_3",
+    "solution": "(lambda (lambda (lambda empty)))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00879__LIST_LIST_MAXIMUM_0_DROP_2_1",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00880__LIST_LIST_MAXIMUM_0_TAKE_2_1",
+    "solution": "(lambda (lambda $0))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00881__LIST_LIST_MAXIMUM_1_DROP_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00882__LIST_LIST_MAXIMUM_1_TAKE_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00883__LIST_LIST_MINIMUM_0_ACCESS_2_1",
+    "solution": "(lambda (lambda (index 5 $0)))",
+    "log_prior": "-8.307953",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_00887__LIST_LIST_MINIMUM_1_DROP_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01023__LIST_LIST_SUM_0_DROP_2_1",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01024__LIST_LIST_SUM_0_TAKE_2_1",
+    "solution": "(lambda (lambda $0))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01025__LIST_LIST_SUM_1_DROP_2_0",
+    "solution": "(lambda (lambda empty))",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01026__LIST_LIST_SUM_1_TAKE_2_0",
+    "solution": "(lambda (lambda $1))",
+    "log_prior": "-3.178054",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01058__LIST_LIST_ZIPWITH_*_0_1_SCAN1L_*_2",
+    "solution": "(lambda (lambda (mapi (lambda (lambda 0)) $0)))",
+    "log_prior": "-8.302018",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01591__LIST_MAP_**2_0_COUNT_<0_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01625__LIST_MAP_**2_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01626__LIST_MAP_**2_0_ZIPWITH_min_0_1",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01627__LIST_MAP_**2_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01633__LIST_MAP_*-1_0_HEAD_1",
+    "solution": "(lambda (negate (index 0 $0)))",
+    "log_prior": "-10.179755",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01642__LIST_MAP_*-1_0_MAXIMUM_1",
+    "solution": "(lambda (negate (index 0 (sort $0))))",
+    "log_prior": "-12.664661",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01650__LIST_MAP_*-1_0_SUM_1",
+    "solution": "(lambda (negate (sum $0)))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01657__LIST_MAP_*-1_0_ZIPWITH_max_1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01660__LIST_MAP_*-1_0_ZIPWITH_min_1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01663__LIST_MAP_*2_0_COUNT_EVEN_1",
+    "solution": "(lambda (sum (mapi (lambda (lambda 1)) $0)))",
+    "log_prior": "-10.173820",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01666__LIST_MAP_*2_0_HEAD_1",
+    "solution": "(lambda (* (index 0 $0) 2))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01681__LIST_MAP_*2_0_SUM_1",
+    "solution": "(lambda (sum (++ $0 $0)))",
+    "log_prior": "-10.019669",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01686__LIST_MAP_*2_0_ZIPWITH_-_0_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01697__LIST_MAP_*3_0_HEAD_1",
+    "solution": "(lambda (* (index 0 $0) 3))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01714__LIST_MAP_*3_0_SUM_1",
+    "solution": "(lambda (* (sum $0) 3))",
+    "log_prior": "-10.179755",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01723__LIST_MAP_*3_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01728__LIST_MAP_*4_0_COUNT_EVEN_1",
+    "solution": "(lambda (sum (mapi (lambda (lambda 1)) $0)))",
+    "log_prior": "-10.173820",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01729__LIST_MAP_*4_0_COUNT_ODD_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01733__LIST_MAP_*4_0_HEAD_1",
+    "solution": "(lambda (* (index 0 $0) 4))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01750__LIST_MAP_*4_0_SUM_1",
+    "solution": "(lambda (* (sum $0) 4))",
+    "log_prior": "-10.179755",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01756__LIST_MAP_*4_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01768__LIST_MAP_+1_0_HEAD_1",
+    "solution": "(lambda (+ (index 0 $0) 1))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01794__LIST_MAP_+1_0_ZIPWITH_-_0_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate 1))) $0))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01795__LIST_MAP_+1_0_ZIPWITH_-_1_0",
+    "solution": "(lambda (mapi (lambda (lambda 1)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01827__LIST_MAP_-1_0_ZIPWITH_-_0_1",
+    "solution": "(lambda (mapi (lambda (lambda 1)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01828__LIST_MAP_-1_0_ZIPWITH_-_1_0",
+    "solution": "(lambda (mapi (lambda (lambda (negate 1))) $0))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01929__LIST_MAP__4_0_SCAN1L_*_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01949__LIST_MINIMUM_0_ACCESS_1_0",
+    "solution": "(lambda (index 4 (reverse $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01963__LIST_REVERSE_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01969__LIST_REVERSE_0_SORT_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01970__LIST_REVERSE_0_SUM_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01971__LIST_REVERSE_0_TAIL_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01981__LIST_REVERSE_0_ZIPWITH_max_1_1",
+    "solution": "(lambda (reverse $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01984__LIST_REVERSE_0_ZIPWITH_min_1_1",
+    "solution": "(lambda (reverse $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_01993__LIST_SCAN1L_*_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02001__LIST_SCAN1L_*_0_MAP__2_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02005__LIST_SCAN1L_*_0_MINIMUM_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02013__LIST_SCAN1L_*_0_SUM_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02014__LIST_SCAN1L_*_0_TAIL_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02023__LIST_SCAN1L_*_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02026__LIST_SCAN1L_*_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02027__LIST_SCAN1L_*_0_ZIPWITH_min_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02036__LIST_SCAN1L_+_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02048__LIST_SCAN1L_+_0_SCAN1L_*_1",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02055__LIST_SCAN1L_+_0_TAIL_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02064__LIST_SCAN1L_+_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02078__LIST_SCAN1L_-_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02091__LIST_SCAN1L_-_0_SCAN1L_*_1",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02106__LIST_SCAN1L_-_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02120__LIST_SCAN1L_max_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02130__LIST_SCAN1L_max_0_MINIMUM_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02152__LIST_SCAN1L_min_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02162__LIST_SCAN1L_min_0_MAXIMUM_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02163__LIST_SCAN1L_min_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02171__LIST_SCAN1L_min_0_TAIL_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02190__LIST_SORT_0_HEAD_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02202__LIST_SORT_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02203__LIST_SORT_0_REVERSE_1",
+    "solution": "(lambda (reverse (sort $0)))",
+    "log_prior": "-7.454720",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02207__LIST_SORT_0_SCAN1L_max_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02209__LIST_SORT_0_SORT_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02210__LIST_SORT_0_SUM_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02220__LIST_SORT_0_ZIPWITH_max_1_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02223__LIST_SORT_0_ZIPWITH_min_1_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02224__LIST_SUM_0_DROP_1_0",
+    "solution": "(lambda empty)",
+    "log_prior": "-2.197225",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02225__LIST_SUM_0_TAKE_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02228__LIST_ZIPWITH_*_0_0_COUNT_<0_1",
+    "solution": "(lambda 0)",
+    "log_prior": "-2.564949",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02262__LIST_ZIPWITH_*_0_0_ZIPWITH_-_1_1",
+    "solution": "(lambda (mapi (lambda (lambda 0)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02263__LIST_ZIPWITH_*_0_0_ZIPWITH_min_0_1",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02264__LIST_ZIPWITH_*_0_0_ZIPWITH_min_1_0",
+    "solution": "(lambda $0)",
+    "log_prior": "-2.484907",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02267__LIST_ZIPWITH_+_0_0_COUNT_EVEN_1",
+    "solution": "(lambda (sum (mapi (lambda (lambda 1)) $0)))",
+    "log_prior": "-10.173820",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02270__LIST_ZIPWITH_+_0_0_HEAD_1",
+    "solution": "(lambda (* (index 0 $0) 2))",
+    "log_prior": "-12.744704",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02285__LIST_ZIPWITH_+_0_0_SUM_1",
+    "solution": "(lambda (sum (++ $0 $0)))",
+    "log_prior": "-10.019669",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02290__LIST_ZIPWITH_+_0_0_ZIPWITH_-_0_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02293__LIST_ZIPWITH_-_0_0_COUNT_EVEN_1",
+    "solution": "(lambda (sum (mapi (lambda (lambda 1)) $0)))",
+    "log_prior": "-10.173820",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02294__LIST_ZIPWITH_-_0_0_MAP_+1_1",
+    "solution": "(lambda (mapi (lambda (lambda 1)) $0))",
+    "log_prior": "-7.608871",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02295__LIST_ZIPWITH_-_0_0_MAP_-1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate 1))) $0))",
+    "log_prior": "-10.247928",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02296__LIST_ZIPWITH_-_0_0_ZIPWITH_-_1_0",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02306__LIST_ZIPWITH_max_0_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02307__LIST_ZIPWITH_max_0_0_MAP_*-1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02312__LIST_ZIPWITH_max_0_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02313__LIST_ZIPWITH_max_0_0_REVERSE_1",
+    "solution": "(lambda (reverse $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02318__LIST_ZIPWITH_max_0_0_SORT_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02319__LIST_ZIPWITH_max_0_0_SUM_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02325__LIST_ZIPWITH_min_0_0_HEAD_1",
+    "solution": "(lambda (index 0 $0))",
+    "log_prior": "-7.614805",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02326__LIST_ZIPWITH_min_0_0_MAP_*-1_1",
+    "solution": "(lambda (mapi (lambda (lambda (negate $0))) $0))",
+    "log_prior": "-10.941075",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02331__LIST_ZIPWITH_min_0_0_MINIMUM_1",
+    "solution": "(lambda (index 0 (sort $0)))",
+    "log_prior": "-10.099712",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02332__LIST_ZIPWITH_min_0_0_REVERSE_1",
+    "solution": "(lambda (reverse $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02337__LIST_ZIPWITH_min_0_0_SORT_1",
+    "solution": "(lambda (sort $0))",
+    "log_prior": "-4.969813",
+    "log_likelihood": "0.000000"
+  },
+  {
+    "split": "train",
+    "task_name": "train_task_02338__LIST_ZIPWITH_min_0_0_SUM_1",
+    "solution": "(lambda (sum $0))",
+    "log_prior": "-5.049856",
+    "log_likelihood": "0.000000"
+  }
+]

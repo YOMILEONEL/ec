@@ -1,0 +1,103 @@
+split,task_name,solution,log_prior,log_likelihood
+test,test_task_00010__LIST_INT_TAKE_1_0_REVERSE_2,(lambda (lambda (reverse $1))),-4.969813,0.000000
+test,test_task_00018__LIST_LIST_INT_DROP_2_0_ZIPWITH_+_1_3,(lambda (lambda (lambda empty))),-2.197225,0.000000
+test,test_task_00019__LIST_LIST_INT_DROP_2_1_ZIPWITH_+_3_0,(lambda (lambda (lambda empty))),-2.197225,0.000000
+test,test_task_00056__LIST_MAP_**2_0_FILTER_<0_1,(lambda empty),-2.197225,0.000000
+test,test_task_00059__LIST_MAP_*-1_0_TAIL_1,(lambda (negate (index 0 (reverse $0)))),-12.664661,0.000000
+test,test_task_00082__LIST_SCAN1L_max_0_ZIPWITH_min_1_0,(lambda $0),-2.484907,0.000000
+test,test_task_00090__LIST_ZIPWITH_-_0_0_MAP__4_1,(lambda (mapi (lambda (lambda 0)) $0)),-7.608871,0.000000
+test,test_task_00091__LIST_ZIPWITH_-_0_0_MAXIMUM_1,(lambda 0),-2.564949,0.000000
+test,test_task_00092__LIST_ZIPWITH_-_0_0_ZIPWITH_+_1_0,(lambda $0),-2.484907,0.000000
+test,test_task_00094__LIST_ZIPWITH_max_0_0_TAIL_1,(lambda (index 0 (reverse $0))),-10.099712,0.000000
+test,test_task_00098__LIST_ZIPWITH_min_0_0_ZIPWITH_min_1_0,(lambda $0),-2.484907,0.000000
+train,train_task_00025__LIST_FILTER_<0_0_MINIMUM_1,(lambda (index 0 (sort $0))),-10.099712,0.000000
+train,train_task_00161__LIST_INT_ACCESS_1_0_DROP_2_0,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00162__LIST_INT_ACCESS_1_0_TAKE_2_0,(lambda (lambda $1)),-2.484907,0.000000
+train,train_task_00163__LIST_INT_DROP_1_0_COUNT_<0_2,(lambda (lambda 0)),-2.639057,0.000000
+train,train_task_00164__LIST_INT_DROP_1_0_COUNT_>0_2,(lambda (lambda 0)),-2.639057,0.000000
+train,train_task_00165__LIST_INT_DROP_1_0_COUNT_EVEN_2,(lambda (lambda 0)),-2.639057,0.000000
+train,train_task_00166__LIST_INT_DROP_1_0_COUNT_ODD_2,(lambda (lambda 0)),-2.639057,0.000000
+train,train_task_00167__LIST_INT_DROP_1_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00168__LIST_INT_DROP_1_0_FILTER_<0_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00170__LIST_INT_DROP_1_0_FILTER_EVEN_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00171__LIST_INT_DROP_1_0_FILTER_ODD_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00172__LIST_INT_DROP_1_0_MAP_**2_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00173__LIST_INT_DROP_1_0_MAP_*-1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00175__LIST_INT_DROP_1_0_MAP_*3_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00176__LIST_INT_DROP_1_0_MAP_*4_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00177__LIST_INT_DROP_1_0_MAP_+1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00178__LIST_INT_DROP_1_0_MAP_-1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00179__LIST_INT_DROP_1_0_MAP__2_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00180__LIST_INT_DROP_1_0_MAP__3_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00181__LIST_INT_DROP_1_0_MAP__4_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00182__LIST_INT_DROP_1_0_REVERSE_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00183__LIST_INT_DROP_1_0_SCAN1L_*_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00184__LIST_INT_DROP_1_0_SCAN1L_+_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00185__LIST_INT_DROP_1_0_SCAN1L_-_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00186__LIST_INT_DROP_1_0_SCAN1L_max_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00188__LIST_INT_DROP_1_0_SORT_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00189__LIST_INT_DROP_1_0_SUM_2,(lambda (lambda 0)),-2.639057,0.000000
+train,train_task_00190__LIST_INT_DROP_1_0_TAKE_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00191__LIST_INT_DROP_1_0_ZIPWITH_*_0_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00193__LIST_INT_DROP_1_0_ZIPWITH_*_2_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00194__LIST_INT_DROP_1_0_ZIPWITH_+_0_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00195__LIST_INT_DROP_1_0_ZIPWITH_+_2_0,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00196__LIST_INT_DROP_1_0_ZIPWITH_+_2_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00197__LIST_INT_DROP_1_0_ZIPWITH_-_0_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00198__LIST_INT_DROP_1_0_ZIPWITH_-_2_0,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00199__LIST_INT_DROP_1_0_ZIPWITH_-_2_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00200__LIST_INT_DROP_1_0_ZIPWITH_max_0_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00201__LIST_INT_DROP_1_0_ZIPWITH_max_2_0,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00202__LIST_INT_DROP_1_0_ZIPWITH_max_2_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00203__LIST_INT_DROP_1_0_ZIPWITH_min_0_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00204__LIST_INT_DROP_1_0_ZIPWITH_min_2_0,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00205__LIST_INT_DROP_1_0_ZIPWITH_min_2_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00206__LIST_INT_FILTER_<0_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00208__LIST_INT_FILTER_>0_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00210__LIST_INT_FILTER_EVEN_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00212__LIST_INT_FILTER_ODD_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00214__LIST_INT_INT_DROP_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.197225,0.000000
+train,train_task_00215__LIST_INT_INT_DROP_1_0_TAKE_2_3,(lambda (lambda (lambda empty))),-2.197225,0.000000
+train,train_task_00216__LIST_INT_INT_DROP_2_0_DROP_1_3,(lambda (lambda (lambda empty))),-2.197225,0.000000
+train,train_task_00218__LIST_INT_INT_TAKE_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.197225,0.000000
+train,train_task_00219__LIST_INT_INT_TAKE_1_0_TAKE_2_3,(lambda (lambda (lambda (slice 0 $0 $2)))),-10.941075,0.000000
+train,train_task_00220__LIST_INT_INT_TAKE_2_0_DROP_1_3,(lambda (lambda (lambda empty))),-2.197225,0.000000
+train,train_task_00221__LIST_INT_INT_TAKE_2_0_TAKE_1_3,(lambda (lambda (lambda (slice 0 $1 $2)))),-10.941075,0.000000
+train,train_task_00222__LIST_INT_MAP_**2_0_ACCESS_1_2,(lambda (lambda (* $0 $0))),-7.917172,0.000000
+train,train_task_00223__LIST_INT_MAP_**2_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00225__LIST_INT_MAP_*-1_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00226__LIST_INT_MAP_*-1_0_TAKE_1_2,(lambda (lambda (mapi (lambda (lambda (negate $0))) $1))),-11.346540,0.000000
+train,train_task_00227__LIST_INT_MAP_*2_0_ACCESS_1_2,(lambda (lambda (* 2 (index $0 $1)))),-13.041136,0.000000
+train,train_task_00228__LIST_INT_MAP_*2_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00229__LIST_INT_MAP_*3_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00231__LIST_INT_MAP_*4_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00237__LIST_INT_MAP__2_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00239__LIST_INT_MAP__3_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00241__LIST_INT_MAP__4_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00243__LIST_INT_REVERSE_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00244__LIST_INT_SCAN1L_*_0_ACCESS_1_2,(lambda (lambda 0)),-2.639057,0.000000
+train,train_task_00245__LIST_INT_SCAN1L_*_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00246__LIST_INT_SCAN1L_+_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00248__LIST_INT_SCAN1L_-_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00249__LIST_INT_SCAN1L_max_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00250__LIST_INT_SCAN1L_min_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00252__LIST_INT_SORT_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00258__LIST_INT_TAKE_1_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00263__LIST_INT_TAKE_1_0_HEAD_2,(lambda (lambda (index 0 $1))),-7.763021,0.000000
+train,train_task_00265__LIST_INT_TAKE_1_0_MAP_*-1_2,(lambda (lambda (mapi (lambda (lambda (negate $0))) $1))),-11.346540,0.000000
+train,train_task_00277__LIST_INT_TAKE_1_0_SORT_2,(lambda (lambda (sort $1))),-4.969813,0.000000
+train,train_task_00278__LIST_INT_TAKE_1_0_SUM_2,(lambda (lambda (sum $1))),-5.123964,0.000000
+train,train_task_00279__LIST_INT_TAKE_1_0_TAIL_2,(lambda (lambda (index 0 (reverse $1)))),-10.247928,0.000000
+train,train_task_00280__LIST_INT_TAKE_1_0_TAKE_1_2,(lambda (lambda $1)),-2.484907,0.000000
+train,train_task_00286__LIST_INT_TAKE_1_0_ZIPWITH_-_2_2,(lambda (lambda (mapi (lambda (lambda 0)) $1))),-7.608871,0.000000
+train,train_task_00287__LIST_INT_TAKE_1_0_ZIPWITH_max_0_2,(lambda (lambda $1)),-2.484907,0.000000
+train,train_task_00288__LIST_INT_TAKE_1_0_ZIPWITH_max_2_0,(lambda (lambda $1)),-2.484907,0.000000
+train,train_task_00289__LIST_INT_TAKE_1_0_ZIPWITH_max_2_2,(lambda (lambda $1)),-2.484907,0.000000
+train,train_task_00290__LIST_INT_TAKE_1_0_ZIPWITH_min_0_2,(lambda (lambda $1)),-2.484907,0.000000
+train,train_task_00291__LIST_INT_TAKE_1_0_ZIPWITH_min_2_0,(lambda (lambda $1)),-2.484907,0.000000
+train,train_task_00292__LIST_INT_TAKE_1_0_ZIPWITH_min_2_2,(lambda (lambda (slice 0 $0 $1))),-10.247928,0.000000
+train,train_task_00293__LIST_INT_ZIPWITH_*_0_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00296__LIST_INT_ZIPWITH_-_0_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00297__LIST_INT_ZIPWITH_-_0_0_TAKE_1_2,(lambda (lambda (mapi (lambda (lambda 0)) $1))),-7.608871,0.000000
+train,train_task_00298__LIST_INT_ZIPWITH_max_0_0_DROP_1_2,(lambda (lambda empty)),-2.197225,0.000000
+train,train_task_00299__LIST_INT_ZIPWITH_max_0_0_TAKE_1_2,(lambda (lambda (slice 0 $0 $1))),-10.247928,0.000000

@@ -1,0 +1,6 @@
+Created DreamCoder Task objects
+Train tasks: 50
+Test tasks: 99
+Train pickle: /mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_10_TT_10_it_2_MF_10_rec_false_nocons_false/step03_create_task_pickles/step03_train_tasks.pkl
+Test pickle: /mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_10_TT_10_it_2_MF_10_rec_false_nocons_false/step03_create_task_pickles/step03_test_tasks.pkl
+DreamCoder repo: /mnt/c/BA/ec

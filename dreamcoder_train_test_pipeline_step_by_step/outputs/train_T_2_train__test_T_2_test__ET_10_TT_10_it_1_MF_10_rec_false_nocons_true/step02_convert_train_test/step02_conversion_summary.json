@@ -1,0 +1,8 @@
+{
+  "train_tasks": 100,
+  "test_tasks": 99,
+  "skipped_tasks": 1,
+  "max_train_tasks": 100,
+  "train_json": "/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_10_TT_10_it_1_MF_10_rec_false_nocons_true/step02_convert_train_test/step02_train_tasks.json",
+  "test_json": "/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_10_TT_10_it_1_MF_10_rec_false_nocons_true/step02_convert_train_test/step02_test_tasks.json"
+}

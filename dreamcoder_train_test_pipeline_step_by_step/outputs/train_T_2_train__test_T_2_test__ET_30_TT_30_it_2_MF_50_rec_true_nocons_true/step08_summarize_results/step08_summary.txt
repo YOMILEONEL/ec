@@ -1,0 +1,44 @@
+DreamCoder train/test summary
+
+Train tasks used: 2339
+Test tasks used: 99
+Iterations: 2
+Enumeration timeout: 30.0
+Testing timeout: 30.0
+Recognition model enabled: True
+Grammar consolidation disabled: True
+
+Test tasks: 99
+Solved test tasks: 12
+Accuracy: 0.121212
+Trivial solutions: 1
+Normalized exact matches: 0
+Abstract exact matches: 0
+
+Normalized metrics over all test tasks:
+  operation_score: 0.002525
+  position_score: 0.000000
+  order_score: 0.002525
+  edit_score: 0.002525
+Normalized metrics over solved test tasks only:
+  operation_score: 0.020833
+  position_score: 0.000000
+  order_score: 0.020833
+  edit_score: 0.020833
+
+Abstract metrics over all test tasks:
+  operation_score: 0.010101
+  position_score: 0.002525
+  order_score: 0.010101
+  edit_score: 0.005051
+Abstract metrics over solved test tasks only:
+  operation_score: 0.083333
+  position_score: 0.020833
+  order_score: 0.083333
+  edit_score: 0.041667
+
+Generated files:
+/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_30_TT_30_it_2_MF_50_rec_true_nocons_true/step08_summarize_results/dreamcoder_test_results_complete.csv
+/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_30_TT_30_it_2_MF_50_rec_true_nocons_true/step08_summarize_results/dreamcoder_test_solved_tasks.csv
+/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_30_TT_30_it_2_MF_50_rec_true_nocons_true/step08_summarize_results/dreamcoder_test_unsolved_tasks.csv
+/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_30_TT_30_it_2_MF_50_rec_true_nocons_true/step07_calculate_metrics/step07_metrics_summary.json
