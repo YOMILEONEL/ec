@@ -298,6 +298,7 @@ try:
         solver="python",
         useRecognitionModel=use_recognition,
         noConsolidation=no_consolidation,
+        compressor="ocaml",
         testingTasks=test_tasks,
         testingTimeout=testing_timeout,
         evaluationTimeout=0.0005,
