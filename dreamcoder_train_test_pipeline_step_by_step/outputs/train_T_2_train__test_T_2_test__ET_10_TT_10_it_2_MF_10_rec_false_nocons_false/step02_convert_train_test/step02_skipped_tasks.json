@@ -1,8 +1,0 @@
-[
-  {
-    "split": "test",
-    "original_index": 8,
-    "program": "LIST|INT|MAP,/3,0|ACCESS,1,2",
-    "reason": "no_usable_examples"
-  }
-]

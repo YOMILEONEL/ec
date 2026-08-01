@@ -63,6 +63,8 @@ top_k = os.environ.get("DREAMCODER_TOPK", "2")
 # too little to learn anything useful. Give it its own budget.
 recognition_timeout = os.environ.get("DREAMCODER_RECOGNITION_TIMEOUT", "")
 recognition_steps = os.environ.get("DREAMCODER_RECOGNITION_STEPS", "")
+if use_recognition.lower() == "true" and not recognition_timeout and not recognition_steps:
+    recognition_timeout = enum_timeout
 
 runner = out_dir / "step04_internal_train_test_runner.py"
 runner.write_text(textwrap.dedent(r'''
@@ -160,6 +162,18 @@ def load_list_primitives():
                 if len(primitive_like) >= max(1, len(value) // 2):
                     return value, f"{origin}:{name}"
     raise RuntimeError("Could not locate DreamCoder list-domain primitives.")
+
+
+def load_feature_extractor():
+    # ecIterator silently disables useRecognitionModel (with just a warning)
+    # if no featureExtractor class is given - it never raises, so this was
+    # going unnoticed. LearnedFeatureExtractor is the list-domain recurrent
+    # feature extractor bin/list.py normally wires up for recognition.
+    try:
+        from dreamcoder.domains.list.main import LearnedFeatureExtractor
+        return LearnedFeatureExtractor, None
+    except Exception:
+        return None, traceback.format_exc()
 
 
 def spec_map(path):
@@ -302,6 +316,12 @@ try:
     primitives, primitive_source = load_list_primitives()
     grammar = Grammar.uniform(primitives)
 
+    feature_extractor, feature_extractor_error = (None, None)
+    if use_recognition:
+        feature_extractor, feature_extractor_error = load_feature_extractor()
+        if feature_extractor is None:
+            (output_dir / "step04_feature_extractor_error.txt").write_text(feature_extractor_error, encoding="utf-8")
+
     setup = {
         "train_tasks": len(train_tasks),
         "test_tasks": len(test_tasks),
@@ -312,6 +332,7 @@ try:
         "iterations": iterations,
         "frontier_size": frontier_size,
         "use_recognition_model": use_recognition,
+        "feature_extractor": getattr(feature_extractor, "__name__", None),
         "no_consolidation": no_consolidation,
         "cpus": cpus,
         "arity": arity,
@@ -350,6 +371,8 @@ try:
         kwargs["recognitionTimeout"] = recognition_timeout
     if recognition_steps is not None:
         kwargs["recognitionSteps"] = recognition_steps
+    if feature_extractor is not None:
+        kwargs["featureExtractor"] = feature_extractor
 
     # DreamCoder forks differ slightly in accepted keyword arguments.
     # Try the richest configuration first and remove compatibility-sensitive keys if necessary.
