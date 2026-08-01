@@ -15,6 +15,7 @@ experimentOutputs
 jobs
 data/geom/**/*.png
 rust_compressor/target
+rust_compressor/rust_compressor
 *.cost
 compressionMessages/
 container.img
