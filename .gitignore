@@ -18,6 +18,7 @@ rust_compressor/target
 rust_compressor/rust_compressor
 *.cost
 compressionMessages/
+jsonDebug
 container.img
 launchers/
 figures/

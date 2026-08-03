@@ -14,3 +14,8 @@ outputs/**/dreamcoder_train_test_aic=*.pickle
 # belongs in version control.
 dataset/
 outputs/
+
+# Scratch memory-monitoring script + logs from ad-hoc debugging sessions
+# (e.g. tracking down the recognition+consolidation WSL2 OOM crash) - not
+# part of the pipeline itself, disposable.
+diag/
