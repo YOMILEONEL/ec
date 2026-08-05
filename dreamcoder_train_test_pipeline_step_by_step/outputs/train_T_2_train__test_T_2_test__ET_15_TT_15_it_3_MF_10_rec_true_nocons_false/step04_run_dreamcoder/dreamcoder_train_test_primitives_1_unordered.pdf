@@ -1,0 +1,37 @@
+digraph {
+	graph [rankdir=LR]
+	f0 [label=<f0=(map (λ (x) (* x x)))>]
+	f4 [label=<f4=(λ (x) (index (f2 (f3 <br /> x))))>]
+	f6 [label=<f6=(λ (x) (f5 (sort x)))>]
+	f7 [label=<f7=(slice 0)>]
+	f8 [label=<f8=(map (λ (x) (+ x x)))>]
+	f5 [label=<f5=(λ (x) (car (reverse <br /> x)))>]
+	f10 [label=<f10=(λ (x) (f3 (f9 (f3 x))))>]
+	f11 [label=<f11=(λ (x) (length (f9 (f0 <br /> x))))>]
+	f12 [label=<f12=(map (λ (x) (* x 3)))>]
+	f13 [label=<f13=(λ (x) (car (sort x)))>]
+	f2 [label=<f2=(λ (x) (length (f1 x)))>]
+	f14 [label=<f14=(map (λ (x) (* 4 x)))>]
+	f15 [label=<f15=(map (λ (x) (- x 1)))>]
+	f16 [label=<f16=(λ (x) (- (f2 x) (length <br /> (f9 x))))>]
+	f17 [label=<f17=(λ (x) (filter (λ (y) <br /> (gt? x y))))>]
+	f18 [label=<f18=(f17 0)>]
+	f1 [label=<f1=(filter (λ (x) (gt? x <br /> 0)))>]
+	f9 [label=<f9=(filter (λ (x) (gt? (mod <br /> x 2) 0)))>]
+	f3 [label=<f3=(map (λ (x) (negate x)))>]
+	f19 [label=<f19=(λ (x) (- (length x) (f11 <br /> x)))>]
+	f20 [label=<f20=(λ (x y) (map (λ (z) 0) <br /> (f17 x (mapi (λ (u v) u) <br /> y))))>]
+	f3 -> f4
+	f2 -> f4
+	f5 -> f6
+	f3 -> f10
+	f9 -> f10
+	f0 -> f11
+	f9 -> f11
+	f1 -> f2
+	f9 -> f16
+	f2 -> f16
+	f17 -> f18
+	f11 -> f19
+	f17 -> f20
+}

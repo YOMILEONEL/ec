@@ -1,0 +1,100 @@
+split,task_id,original_index,task_name,request,reference_program,solved,solution,log_prior,log_likelihood,solution_source,stdout_fallback_used,frontier_source,distinct_example_outputs,degenerate_example_set
+test,test_00000,0,test_task_00000__LIST_COUNT_<0_0_TAKE_1_0,list(int) -> list(int),"LIST|COUNT,<0,0|TAKE,1,0",True,(lambda (slice (negate 0) (length (#(#(lambda (filter (lambda (gt? $1 $0)))) 0) $0)) $0)),-15.593579343915195,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00001,1,test_task_00001__LIST_FILTER_<0_0_ZIPWITH_*_0_1,list(int) -> list(int),"LIST|FILTER,<0,0|ZIPWITH,*,0,1",False,,,,,0,,4,False
+test,test_00002,2,test_task_00002__LIST_FILTER_<0_0_ZIPWITH_*_1_1,list(int) -> list(int),"LIST|FILTER,<0,0|ZIPWITH,*,1,1",True,(lambda (#(map (lambda (* $0 $0))) (#(lambda (filter (lambda (gt? $1 $0)))) 0 $0))),-8.429787192774329,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00003,3,test_task_00003__LIST_FILTER_>0_0_MAP_*-1_1,list(int) -> list(int),"LIST|FILTER,>0,0|MAP,*-1,1",True,(lambda (#(lambda (filter (lambda (gt? $1 $0)))) 3 (#(map (lambda (negate $0))) $0))),-10.769570021592958,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00004,4,test_task_00004__LIST_FILTER_>0_0_TAIL_1,list(int) -> int,"LIST|FILTER,>0,0|TAIL,1",True,(lambda (car (#(filter (lambda (gt? $0 0))) (reverse $0)))),-9.739205954389753,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00005,5,test_task_00005__LIST_FILTER_EVEN_0_MAP_+1_1,list(int) -> list(int),"LIST|FILTER,EVEN,0|MAP,+1,1",False,,,,,0,,5,False
+test,test_00006,6,test_task_00006__LIST_FILTER_ODD_0_COUNT_>0_1,list(int) -> int,"LIST|FILTER,ODD,0|COUNT,>0,1",True,(lambda (length (#(filter (lambda (gt? $0 0))) (#(filter (lambda (gt? $0 0))) (#(filter (lambda (gt? (mod $0 2) 0))) $0))))),-10.250110247285686,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00007,7,test_task_00007__LIST_FILTER_ODD_0_MAP_*4_1,list(int) -> list(int),"LIST|FILTER,ODD,0|MAP,*4,1",False,,,,,0,,5,False
+test,test_00008,9,test_task_00008__LIST_INT_SCAN1L_-_0_TAKE_1_2,list(int) -> int -> list(int),"LIST|INT|SCAN1L,-,0|TAKE,1,2",False,,,,,0,,5,False
+test,test_00009,10,test_task_00009__LIST_INT_SCAN1L_max_0_TAKE_1_2,list(int) -> int -> list(int),"LIST|INT|SCAN1L,max,0|TAKE,1,2",False,,,,,0,,5,False
+test,test_00010,11,test_task_00010__LIST_INT_TAKE_1_0_REVERSE_2,list(int) -> int -> list(int),"LIST|INT|TAKE,1,0|REVERSE,2",True,(lambda (lambda (mapi (lambda (lambda $0)) (reverse $1)))),-11.921133046461911,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00011,12,test_task_00011__LIST_INT_TAKE_1_0_SCAN1L_*_2,list(int) -> int -> list(int),"LIST|INT|TAKE,1,0|SCAN1L,*,2",False,,,,,0,,5,False
+test,test_00012,13,test_task_00012__LIST_INT_TAKE_1_0_ZIPWITH_+_2_2,list(int) -> int -> list(int),"LIST|INT|TAKE,1,0|ZIPWITH,+,2,2",True,(lambda (lambda (mapi (lambda (lambda (* 2 $0))) $1))),-17.93656655905862,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00013,14,test_task_00013__LIST_LIST_COUNT_<0_0_TAKE_2_1,list(int) -> list(int) -> list(int),"LIST|LIST|COUNT,<0,0|TAKE,2,1",False,,,,,0,,5,False
+test,test_00014,15,test_task_00014__LIST_LIST_FILTER_<0_1_ZIPWITH_max_2_0,list(int) -> list(int) -> list(int),"LIST|LIST|FILTER,<0,1|ZIPWITH,max,2,0",False,,,,,0,,5,False
+test,test_00015,16,test_task_00015__LIST_LIST_FILTER_<0_1_ZIPWITH_min_2_0,list(int) -> list(int) -> list(int),"LIST|LIST|FILTER,<0,1|ZIPWITH,min,2,0",False,,,,,0,,5,False
+test,test_00016,17,test_task_00016__LIST_LIST_FILTER_>0_1_ZIPWITH_+_0_2,list(int) -> list(int) -> list(int),"LIST|LIST|FILTER,>0,1|ZIPWITH,+,0,2",False,,,,,0,,5,False
+test,test_00017,18,test_task_00017__LIST_LIST_FILTER_ODD_1_ZIPWITH_max_0_2,list(int) -> list(int) -> list(int),"LIST|LIST|FILTER,ODD,1|ZIPWITH,max,0,2",False,,,,,0,,5,False
+test,test_00018,19,test_task_00018__LIST_LIST_INT_DROP_2_0_ZIPWITH_+_1_3,list(int) -> list(int) -> int -> list(int),"LIST|LIST|INT|DROP,2,0|ZIPWITH,+,1,3",True,(lambda (lambda (lambda (sort empty)))),-4.949563065508858,0.0,frontier,0,frontiersOverTime[task],1,True
+test,test_00019,20,test_task_00019__LIST_LIST_INT_DROP_2_1_ZIPWITH_+_3_0,list(int) -> list(int) -> int -> list(int),"LIST|LIST|INT|DROP,2,1|ZIPWITH,+,3,0",True,(lambda (lambda (lambda (sort empty)))),-4.587290108146728,0.0,frontier,0,frontiersOverTime[task],1,True
+test,test_00020,21,test_task_00020__LIST_LIST_LIST_ZIPWITH_*_0_1_ZIPWITH_-_3_2,list(int) -> list(int) -> list(int) -> list(int),"LIST|LIST|LIST|ZIPWITH,*,0,1|ZIPWITH,-,3,2",False,,,,,0,,5,False
+test,test_00021,22,test_task_00021__LIST_LIST_LIST_ZIPWITH_*_1_2_ZIPWITH_*_3_0,list(int) -> list(int) -> list(int) -> list(int),"LIST|LIST|LIST|ZIPWITH,*,1,2|ZIPWITH,*,3,0",False,,,,,0,,4,False
+test,test_00022,23,test_task_00022__LIST_LIST_LIST_ZIPWITH_+_1_2_ZIPWITH_+_3_0,list(int) -> list(int) -> list(int) -> list(int),"LIST|LIST|LIST|ZIPWITH,+,1,2|ZIPWITH,+,3,0",False,,,,,0,,5,False
+test,test_00023,24,test_task_00023__LIST_LIST_LIST_ZIPWITH_+_2_1_ZIPWITH_*_3_0,list(int) -> list(int) -> list(int) -> list(int),"LIST|LIST|LIST|ZIPWITH,+,2,1|ZIPWITH,*,3,0",False,,,,,0,,5,False
+test,test_00024,25,test_task_00024__LIST_LIST_LIST_ZIPWITH_-_0_1_ZIPWITH_*_3_2,list(int) -> list(int) -> list(int) -> list(int),"LIST|LIST|LIST|ZIPWITH,-,0,1|ZIPWITH,*,3,2",False,,,,,0,,5,False
+test,test_00025,26,test_task_00025__LIST_LIST_LIST_ZIPWITH_-_1_2_ZIPWITH_+_0_3,list(int) -> list(int) -> list(int) -> list(int),"LIST|LIST|LIST|ZIPWITH,-,1,2|ZIPWITH,+,0,3",False,,,,,0,,5,False
+test,test_00026,27,test_task_00026__LIST_LIST_LIST_ZIPWITH_min_0_2_ZIPWITH_max_3_1,list(int) -> list(int) -> list(int) -> list(int),"LIST|LIST|LIST|ZIPWITH,min,0,2|ZIPWITH,max,3,1",False,,,,,0,,5,False
+test,test_00027,28,test_task_00027__LIST_LIST_MAP_**2_0_ZIPWITH_*_2_1,list(int) -> list(int) -> list(int),"LIST|LIST|MAP,**2,0|ZIPWITH,*,2,1",False,,,,,0,,5,False
+test,test_00028,29,test_task_00028__LIST_LIST_MAP_*3_0_ZIPWITH_-_2_1,list(int) -> list(int) -> list(int),"LIST|LIST|MAP,*3,0|ZIPWITH,-,2,1",False,,,,,0,,5,False
+test,test_00029,30,test_task_00029__LIST_LIST_MAP_-1_0_ZIPWITH_*_1_2,list(int) -> list(int) -> list(int),"LIST|LIST|MAP,-1,0|ZIPWITH,*,1,2",False,,,,,0,,5,False
+test,test_00030,31,test_task_00030__LIST_LIST_MAP_-1_1_ZIPWITH_max_2_0,list(int) -> list(int) -> list(int),"LIST|LIST|MAP,-1,1|ZIPWITH,max,2,0",False,,,,,0,,5,False
+test,test_00031,32,test_task_00031__LIST_LIST_MAP__3_0_ZIPWITH_*_1_2,list(int) -> list(int) -> list(int),"LIST|LIST|MAP,/3,0|ZIPWITH,*,1,2",False,,,,,0,,5,False
+test,test_00032,33,test_task_00032__LIST_LIST_MAP__3_0_ZIPWITH_-_2_1,list(int) -> list(int) -> list(int),"LIST|LIST|MAP,/3,0|ZIPWITH,-,2,1",False,,,,,0,,5,False
+test,test_00033,34,test_task_00033__LIST_LIST_MAP__4_1_ZIPWITH_max_2_0,list(int) -> list(int) -> list(int),"LIST|LIST|MAP,/4,1|ZIPWITH,max,2,0",False,,,,,0,,5,False
+test,test_00034,35,test_task_00034__LIST_LIST_SCAN1L_-_0_ZIPWITH_*_1_2,list(int) -> list(int) -> list(int),"LIST|LIST|SCAN1L,-,0|ZIPWITH,*,1,2",False,,,,,0,,5,False
+test,test_00035,36,test_task_00035__LIST_LIST_SCAN1L_-_1_ZIPWITH_max_0_2,list(int) -> list(int) -> list(int),"LIST|LIST|SCAN1L,-,1|ZIPWITH,max,0,2",False,,,,,0,,5,False
+test,test_00036,37,test_task_00036__LIST_LIST_SCAN1L_-_1_ZIPWITH_max_2_0,list(int) -> list(int) -> list(int),"LIST|LIST|SCAN1L,-,1|ZIPWITH,max,2,0",False,,,,,0,,5,False
+test,test_00037,38,test_task_00037__LIST_LIST_SORT_1_ZIPWITH_*_0_2,list(int) -> list(int) -> list(int),"LIST|LIST|SORT,1|ZIPWITH,*,0,2",False,,,,,0,,5,False
+test,test_00038,39,test_task_00038__LIST_LIST_TAIL_0_TAKE_2_1,list(int) -> list(int) -> list(int),"LIST|LIST|TAIL,0|TAKE,2,1",False,,,,,0,,5,False
+test,test_00039,40,test_task_00039__LIST_LIST_ZIPWITH_*_0_0_ZIPWITH_max_1_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,*,0,0|ZIPWITH,max,1,2",False,,,,,0,,5,False
+test,test_00040,41,test_task_00040__LIST_LIST_ZIPWITH_*_0_1_FILTER_>0_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,*,0,1|FILTER,>0,2",False,,,,,0,,5,False
+test,test_00041,42,test_task_00041__LIST_LIST_ZIPWITH_*_0_1_REVERSE_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,*,0,1|REVERSE,2",False,,,,,0,,5,False
+test,test_00042,43,test_task_00042__LIST_LIST_ZIPWITH_*_0_1_ZIPWITH_-_2_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,*,0,1|ZIPWITH,-,2,2",True,(lambda (lambda (#(lambda (lambda (map (lambda 0) (#(lambda (filter (lambda (gt? $1 $0)))) $1 (mapi (lambda (lambda $1)) $0))))) (length $1) $0))),-8.754689658387065,0.0,frontier,0,frontiersOverTime[task],3,False
+test,test_00043,44,test_task_00043__LIST_LIST_ZIPWITH_*_1_0_ZIPWITH_+_1_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,*,1,0|ZIPWITH,+,1,2",False,,,,,0,,5,False
+test,test_00044,45,test_task_00044__LIST_LIST_ZIPWITH_*_1_1_ZIPWITH_-_0_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,*,1,1|ZIPWITH,-,0,2",False,,,,,0,,5,False
+test,test_00045,46,test_task_00045__LIST_LIST_ZIPWITH_+_0_1_MINIMUM_2,list(int) -> list(int) -> int,"LIST|LIST|ZIPWITH,+,0,1|MINIMUM,2",False,,,,,0,,5,False
+test,test_00046,47,test_task_00046__LIST_LIST_ZIPWITH_-_0_0_ZIPWITH_*_1_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,-,0,0|ZIPWITH,*,1,2",True,(lambda (lambda (#(lambda (lambda (map (lambda 0) (#(lambda (filter (lambda (gt? $1 $0)))) $1 (mapi (lambda (lambda $1)) $0))))) (length $1) $0))),-8.445357602203295,0.0,frontier,0,frontiersOverTime[task],4,False
+test,test_00047,48,test_task_00047__LIST_LIST_ZIPWITH_-_0_0_ZIPWITH_*_2_1,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,-,0,0|ZIPWITH,*,2,1",True,(lambda (lambda (#(lambda (lambda (map (lambda 0) (#(lambda (filter (lambda (gt? $1 $0)))) $1 (mapi (lambda (lambda $1)) $0))))) (length $1) $0))),-8.633819936259352,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00048,49,test_task_00048__LIST_LIST_ZIPWITH_-_0_1_ZIPWITH_*_0_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,-,0,1|ZIPWITH,*,0,2",False,,,,,0,,5,False
+test,test_00049,50,test_task_00049__LIST_LIST_ZIPWITH_-_1_0_ZIPWITH_+_2_1,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,-,1,0|ZIPWITH,+,2,1",False,,,,,0,,5,False
+test,test_00050,51,test_task_00050__LIST_LIST_ZIPWITH_max_0_1_MAP_+1_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,max,0,1|MAP,+1,2",False,,,,,0,,5,False
+test,test_00051,52,test_task_00051__LIST_LIST_ZIPWITH_max_1_0_ZIPWITH_*_1_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,max,1,0|ZIPWITH,*,1,2",False,,,,,0,,5,False
+test,test_00052,53,test_task_00052__LIST_LIST_ZIPWITH_max_1_0_ZIPWITH_min_2_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,max,1,0|ZIPWITH,min,2,2",False,,,,,0,,5,False
+test,test_00053,54,test_task_00053__LIST_LIST_ZIPWITH_min_0_1_ZIPWITH_min_0_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,min,0,1|ZIPWITH,min,0,2",False,,,,,0,,5,False
+test,test_00054,55,test_task_00054__LIST_LIST_ZIPWITH_min_1_0_FILTER_EVEN_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,min,1,0|FILTER,EVEN,2",False,,,,,0,,5,False
+test,test_00055,56,test_task_00055__LIST_LIST_ZIPWITH_min_1_0_MAP__4_2,list(int) -> list(int) -> list(int),"LIST|LIST|ZIPWITH,min,1,0|MAP,/4,2",False,,,,,0,,5,False
+test,test_00056,57,test_task_00056__LIST_MAP_**2_0_FILTER_<0_1,list(int) -> list(int),"LIST|MAP,**2,0|FILTER,<0,1",True,(lambda (#(map (lambda (negate $0))) empty)),-7.583193485161994,0.0,frontier,0,frontiersOverTime[task],1,True
+test,test_00057,58,test_task_00057__LIST_MAP_*-1_0_COUNT_>0_1,list(int) -> int,"LIST|MAP,*-1,0|COUNT,>0,1",True,(lambda (length (#(map (lambda (negate $0))) (#(#(lambda (filter (lambda (gt? $1 $0)))) 0) $0)))),-8.51040250416896,0.0,frontier,0,frontiersOverTime[task],4,False
+test,test_00058,59,test_task_00058__LIST_MAP_*-1_0_SCAN1L_max_1,list(int) -> list(int),"LIST|MAP,*-1,0|SCAN1L,max,1",False,,,,,0,,5,False
+test,test_00059,60,test_task_00059__LIST_MAP_*-1_0_TAIL_1,list(int) -> int,"LIST|MAP,*-1,0|TAIL,1",True,(lambda (negate (#(lambda (car (reverse $0))) $0))),-7.0858093392331725,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00060,61,test_task_00060__LIST_MAP_*2_0_SCAN1L_max_1,list(int) -> list(int),"LIST|MAP,*2,0|SCAN1L,max,1",False,,,,,0,,5,False
+test,test_00061,62,test_task_00061__LIST_MAP_*2_0_ZIPWITH_*_1_1,list(int) -> list(int),"LIST|MAP,*2,0|ZIPWITH,*,1,1",True,(lambda (#(map (lambda (* 4 $0))) (#(map (lambda (* $0 $0))) (map (lambda $0) $0)))),-11.700287039458505,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00062,63,test_task_00062__LIST_MAP_*3_0_ZIPWITH_min_0_1,list(int) -> list(int),"LIST|MAP,*3,0|ZIPWITH,min,0,1",False,,,,,0,,5,False
+test,test_00063,64,test_task_00063__LIST_MAP_*4_0_MAP_**2_1,list(int) -> list(int),"LIST|MAP,*4,0|MAP,**2,1",True,(lambda (#(map (lambda (* 4 $0))) (#(map (lambda (* 4 $0))) (#(map (lambda (* $0 $0))) $0)))),-12.025122195195886,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00064,65,test_task_00064__LIST_MAP_*4_0_REVERSE_1,list(int) -> list(int),"LIST|MAP,*4,0|REVERSE,1",True,(lambda (#(map (lambda (* 4 $0))) (reverse (map (lambda $0) $0)))),-13.209569994986474,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00065,66,test_task_00065__LIST_MAP_*4_0_ZIPWITH_-_1_0,list(int) -> list(int),"LIST|MAP,*4,0|ZIPWITH,-,1,0",True,(lambda (map (lambda (* $0 3)) $0)),-15.663581847822854,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00066,67,test_task_00066__LIST_MAP_+1_0_COUNT_>0_1,list(int) -> int,"LIST|MAP,+1,0|COUNT,>0,1",True,(lambda (length (#(filter (lambda (gt? $0 0))) (reverse $0)))),-8.646761448116969,0.0,frontier,0,frontiersOverTime[task],4,False
+test,test_00067,68,test_task_00067__LIST_MAP_+1_0_REVERSE_1,list(int) -> list(int),"LIST|MAP,+1,0|REVERSE,1",False,,,,,0,,5,False
+test,test_00068,69,test_task_00068__LIST_MAP_+1_0_ZIPWITH_max_1_0,list(int) -> list(int),"LIST|MAP,+1,0|ZIPWITH,max,1,0",True,(lambda (map (lambda (- 1 $0)) (#(map (lambda (negate $0))) $0))),-16.633892698033478,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00069,70,test_task_00069__LIST_MAP_-1_0_FILTER_>0_1,list(int) -> list(int),"LIST|MAP,-1,0|FILTER,>0,1",True,(lambda (#(filter (lambda (gt? $0 0))) (map (lambda (- $0 1)) $0))),-19.18683653082474,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00070,71,test_task_00070__LIST_MAP_-1_0_FILTER_ODD_1,list(int) -> list(int),"LIST|MAP,-1,0|FILTER,ODD,1",False,,,,,0,,5,False
+test,test_00071,72,test_task_00071__LIST_MAP__2_0_ZIPWITH_max_1_1,list(int) -> list(int),"LIST|MAP,/2,0|ZIPWITH,max,1,1",False,,,,,0,,5,False
+test,test_00072,73,test_task_00072__LIST_MAP__4_0_HEAD_1,list(int) -> int,"LIST|MAP,/4,0|HEAD,1",False,,,,,0,,5,False
+test,test_00073,74,test_task_00073__LIST_MAP__4_0_MAXIMUM_1,list(int) -> int,"LIST|MAP,/4,0|MAXIMUM,1",False,,,,,0,,5,False
+test,test_00074,75,test_task_00074__LIST_MAP__4_0_ZIPWITH_min_1_1,list(int) -> list(int),"LIST|MAP,/4,0|ZIPWITH,min,1,1",False,,,,,0,,5,False
+test,test_00075,76,test_task_00075__LIST_REVERSE_0_MAP__4_1,list(int) -> list(int),"LIST|REVERSE,0|MAP,/4,1",False,,,,,0,,5,False
+test,test_00076,77,test_task_00076__LIST_REVERSE_0_ZIPWITH_*_1_1,list(int) -> list(int),"LIST|REVERSE,0|ZIPWITH,*,1,1",True,(lambda (#(map (lambda (* $0 $0))) (reverse $0))),-7.743221555821492,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00077,78,test_task_00077__LIST_SCAN1L_*_0_ZIPWITH_max_1_0,list(int) -> list(int),"LIST|SCAN1L,*,0|ZIPWITH,max,1,0",False,,,,,0,,5,False
+test,test_00078,79,test_task_00078__LIST_SCAN1L_+_0_MAP_*3_1,list(int) -> list(int),"LIST|SCAN1L,+,0|MAP,*3,1",False,,,,,0,,5,False
+test,test_00079,80,test_task_00079__LIST_SCAN1L_+_0_MAP__4_1,list(int) -> list(int),"LIST|SCAN1L,+,0|MAP,/4,1",False,,,,,0,,5,False
+test,test_00080,81,test_task_00080__LIST_SCAN1L_-_0_FILTER_<0_1,list(int) -> list(int),"LIST|SCAN1L,-,0|FILTER,<0,1",False,,,,,0,,5,False
+test,test_00081,82,test_task_00081__LIST_SCAN1L_max_0_MAP__3_1,list(int) -> list(int),"LIST|SCAN1L,max,0|MAP,/3,1",False,,,,,0,,5,False
+test,test_00082,83,test_task_00082__LIST_SCAN1L_max_0_ZIPWITH_min_1_0,list(int) -> list(int),"LIST|SCAN1L,max,0|ZIPWITH,min,1,0",True,(lambda (car (mapi (lambda (lambda $2)) $0))),-9.439271803548019,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00083,84,test_task_00083__LIST_SCAN1L_min_0_SCAN1L_*_1,list(int) -> list(int),"LIST|SCAN1L,min,0|SCAN1L,*,1",False,,,,,0,,5,False
+test,test_00084,85,test_task_00084__LIST_SORT_0_ZIPWITH_max_0_1,list(int) -> list(int),"LIST|SORT,0|ZIPWITH,max,0,1",False,,,,,0,,5,False
+test,test_00085,86,test_task_00085__LIST_TAIL_0_TAKE_1_0,list(int) -> list(int),"LIST|TAIL,0|TAKE,1,0",True,(lambda (slice (negate 0) (#(lambda (car (reverse $0))) $0) $0)),-14.370438913488375,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00086,87,test_task_00086__LIST_ZIPWITH_*_0_0_MAP__2_1,list(int) -> list(int),"LIST|ZIPWITH,*,0,0|MAP,/2,1",False,,,,,0,,5,False
+test,test_00087,88,test_task_00087__LIST_ZIPWITH_+_0_0_MAP_*3_1,list(int) -> list(int),"LIST|ZIPWITH,+,0,0|MAP,*3,1",False,,,,,0,,5,False
+test,test_00088,89,test_task_00088__LIST_ZIPWITH_+_0_0_SCAN1L_-_1,list(int) -> list(int),"LIST|ZIPWITH,+,0,0|SCAN1L,-,1",False,,,,,0,,5,False
+test,test_00089,90,test_task_00089__LIST_ZIPWITH_+_0_0_ZIPWITH_max_0_1,list(int) -> list(int),"LIST|ZIPWITH,+,0,0|ZIPWITH,max,0,1",False,,,,,0,,5,False
+test,test_00090,91,test_task_00090__LIST_ZIPWITH_-_0_0_MAP__4_1,list(int) -> list(int),"LIST|ZIPWITH,-,0,0|MAP,/4,1",True,(lambda (mapi (lambda (lambda 0)) (#(map (lambda (* $0 $0))) $0))),-8.505444332544046,0.0,frontier,0,frontiersOverTime[task],4,False
+test,test_00091,92,test_task_00091__LIST_ZIPWITH_-_0_0_MAXIMUM_1,list(int) -> int,"LIST|ZIPWITH,-,0,0|MAXIMUM,1",True,(lambda (* 0 0)),-4.440990347329754,0.0,frontier,0,frontiersOverTime[task],1,True
+test,test_00092,93,test_task_00092__LIST_ZIPWITH_-_0_0_ZIPWITH_+_1_0,list(int) -> list(int),"LIST|ZIPWITH,-,0,0|ZIPWITH,+,1,0",True,(lambda (map (lambda $0) (map (lambda $0) $0))),-9.48697906924862,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00093,94,test_task_00093__LIST_ZIPWITH_max_0_0_COUNT_>0_1,list(int) -> int,"LIST|ZIPWITH,max,0,0|COUNT,>0,1",True,(lambda (length (#(filter (lambda (gt? $0 0))) (sort $0)))),-7.839332543663314,0.0,frontier,0,frontiersOverTime[task],4,False
+test,test_00094,95,test_task_00094__LIST_ZIPWITH_max_0_0_TAIL_1,list(int) -> int,"LIST|ZIPWITH,max,0,0|TAIL,1",True,(lambda (- (#(lambda (car (reverse $0))) $0) 0)),-11.11138982214304,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00095,96,test_task_00095__LIST_ZIPWITH_max_0_0_ZIPWITH_+_1_0,list(int) -> list(int),"LIST|ZIPWITH,max,0,0|ZIPWITH,+,1,0",True,(lambda (mapi (lambda (lambda (- $0 (negate $0)))) $0)),-17.39496134283314,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00096,97,test_task_00096__LIST_ZIPWITH_min_0_0_FILTER_>0_1,list(int) -> list(int),"LIST|ZIPWITH,min,0,0|FILTER,>0,1",True,(lambda (map (lambda $0) (#(filter (lambda (gt? $0 0))) $0))),-7.866847434521764,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00097,98,test_task_00097__LIST_ZIPWITH_min_0_0_ZIPWITH_*_1_0,list(int) -> list(int),"LIST|ZIPWITH,min,0,0|ZIPWITH,*,1,0",True,(lambda (mapi (lambda (lambda (* $0 $0))) $0)),-10.947548875786048,0.0,frontier,0,frontiersOverTime[task],5,False
+test,test_00098,99,test_task_00098__LIST_ZIPWITH_min_0_0_ZIPWITH_min_1_0,list(int) -> list(int),"LIST|ZIPWITH,min,0,0|ZIPWITH,min,1,0",True,(lambda (map (lambda $0) (map (lambda $0) $0))),-8.938278680415323,0.0,frontier,0,frontiersOverTime[task],5,False

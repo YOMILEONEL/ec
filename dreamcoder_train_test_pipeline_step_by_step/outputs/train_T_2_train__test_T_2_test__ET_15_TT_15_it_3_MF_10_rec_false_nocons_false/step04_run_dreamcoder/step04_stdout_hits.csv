@@ -1,0 +1,442 @@
+split,task_name,solution,log_prior,log_likelihood
+test,test_task_00010__LIST_INT_TAKE_1_0_REVERSE_2,(lambda (lambda (reverse $1))),-5.780744,0.000000
+test,test_task_00012__LIST_INT_TAKE_1_0_ZIPWITH_+_2_2,(lambda (lambda (map (lambda (* $0 2)) $1))),-15.145006,0.000000
+test,test_task_00018__LIST_LIST_INT_DROP_2_0_ZIPWITH_+_1_3,(lambda (lambda (lambda empty))),-2.890372,0.000000
+test,test_task_00019__LIST_LIST_INT_DROP_2_1_ZIPWITH_+_3_0,(lambda (lambda (lambda empty))),-2.890372,0.000000
+test,test_task_00056__LIST_MAP_**2_0_FILTER_<0_1,(lambda empty),-2.890372,0.000000
+test,test_task_00059__LIST_MAP_*-1_0_TAIL_1,(lambda (negate (car (reverse $0)))),-11.447170,0.000000
+test,test_task_00065__LIST_MAP_*4_0_ZIPWITH_-_1_0,(lambda (map (lambda (* $0 3)) $0)),-14.451859,0.000000
+test,test_task_00068__LIST_MAP_+1_0_ZIPWITH_max_1_0,(lambda (map (lambda (+ $0 1)) $0)),-14.451859,0.000000
+test,test_task_00082__LIST_SCAN1L_max_0_ZIPWITH_min_1_0,(lambda $0),-2.890372,0.000000
+test,test_task_00090__LIST_ZIPWITH_-_0_0_MAP__4_1,(lambda (map (lambda 0) $0)),-8.671115,0.000000
+test,test_task_00091__LIST_ZIPWITH_-_0_0_MAXIMUM_1,(lambda 0),-2.833213,0.000000
+test,test_task_00092__LIST_ZIPWITH_-_0_0_ZIPWITH_+_1_0,(lambda $0),-2.890372,0.000000
+test,test_task_00094__LIST_ZIPWITH_max_0_0_TAIL_1,(lambda (car (reverse $0))),-8.613957,0.000000
+test,test_task_00095__LIST_ZIPWITH_max_0_0_ZIPWITH_+_1_0,(lambda (map (lambda (* $0 2)) $0)),-14.451859,0.000000
+test,test_task_00096__LIST_ZIPWITH_min_0_0_FILTER_>0_1,(lambda (filter (lambda (gt? $0 0)) $0)),-13.959382,0.000000
+test,test_task_00097__LIST_ZIPWITH_min_0_0_ZIPWITH_*_1_0,(lambda (map (lambda (* $0 $0)) $0)),-14.451859,0.000000
+test,test_task_00098__LIST_ZIPWITH_min_0_0_ZIPWITH_min_1_0,(lambda $0),-2.890372,0.000000
+train,train_task_00011__LIST_FILTER_<0_0_FILTER_<0_1,(lambda (filter (lambda (gt? 0 $0)) $0)),-13.959382,0.000000
+train,train_task_00025__LIST_FILTER_<0_0_MINIMUM_1,(lambda (car (sort $0))),-8.613957,0.000000
+train,train_task_00041__LIST_FILTER_<0_0_ZIPWITH_max_1_1,(lambda (filter (lambda (gt? 0 $0)) $0)),-13.959382,0.000000
+train,train_task_00044__LIST_FILTER_<0_0_ZIPWITH_min_1_1,(lambda (filter (lambda (gt? 0 $0)) $0)),-13.959382,0.000000
+train,train_task_00057__LIST_FILTER_>0_0_MAXIMUM_1,(lambda (car (reverse (sort $0)))),-11.504329,0.000000
+train,train_task_00060__LIST_FILTER_>0_0_SCAN1L_*_1,(lambda (filter (lambda (gt? $0 0)) $0)),-13.959382,0.000000
+train,train_task_00076__LIST_FILTER_>0_0_ZIPWITH_max_0_1,(lambda (filter (lambda (gt? $0 0)) $0)),-13.959382,0.000000
+train,train_task_00159__LIST_HEAD_0_ACCESS_1_0,(lambda (index (car $0) $0)),-11.447170,0.000000
+train,train_task_00161__LIST_INT_ACCESS_1_0_DROP_2_0,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00162__LIST_INT_ACCESS_1_0_TAKE_2_0,(lambda (lambda $1)),-2.890372,0.000000
+train,train_task_00163__LIST_INT_DROP_1_0_COUNT_<0_2,(lambda (lambda 0)),-2.890372,0.000000
+train,train_task_00164__LIST_INT_DROP_1_0_COUNT_>0_2,(lambda (lambda 0)),-2.890372,0.000000
+train,train_task_00165__LIST_INT_DROP_1_0_COUNT_EVEN_2,(lambda (lambda 0)),-2.890372,0.000000
+train,train_task_00166__LIST_INT_DROP_1_0_COUNT_ODD_2,(lambda (lambda 0)),-2.890372,0.000000
+train,train_task_00167__LIST_INT_DROP_1_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00168__LIST_INT_DROP_1_0_FILTER_<0_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00170__LIST_INT_DROP_1_0_FILTER_EVEN_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00171__LIST_INT_DROP_1_0_FILTER_ODD_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00172__LIST_INT_DROP_1_0_MAP_**2_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00173__LIST_INT_DROP_1_0_MAP_*-1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00175__LIST_INT_DROP_1_0_MAP_*3_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00176__LIST_INT_DROP_1_0_MAP_*4_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00177__LIST_INT_DROP_1_0_MAP_+1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00178__LIST_INT_DROP_1_0_MAP_-1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00179__LIST_INT_DROP_1_0_MAP__2_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00180__LIST_INT_DROP_1_0_MAP__3_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00181__LIST_INT_DROP_1_0_MAP__4_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00182__LIST_INT_DROP_1_0_REVERSE_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00183__LIST_INT_DROP_1_0_SCAN1L_*_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00184__LIST_INT_DROP_1_0_SCAN1L_+_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00185__LIST_INT_DROP_1_0_SCAN1L_-_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00186__LIST_INT_DROP_1_0_SCAN1L_max_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00188__LIST_INT_DROP_1_0_SORT_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00189__LIST_INT_DROP_1_0_SUM_2,(lambda (lambda 0)),-2.890372,0.000000
+train,train_task_00190__LIST_INT_DROP_1_0_TAKE_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00191__LIST_INT_DROP_1_0_ZIPWITH_*_0_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00193__LIST_INT_DROP_1_0_ZIPWITH_*_2_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00194__LIST_INT_DROP_1_0_ZIPWITH_+_0_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00195__LIST_INT_DROP_1_0_ZIPWITH_+_2_0,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00196__LIST_INT_DROP_1_0_ZIPWITH_+_2_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00197__LIST_INT_DROP_1_0_ZIPWITH_-_0_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00198__LIST_INT_DROP_1_0_ZIPWITH_-_2_0,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00199__LIST_INT_DROP_1_0_ZIPWITH_-_2_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00200__LIST_INT_DROP_1_0_ZIPWITH_max_0_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00201__LIST_INT_DROP_1_0_ZIPWITH_max_2_0,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00202__LIST_INT_DROP_1_0_ZIPWITH_max_2_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00203__LIST_INT_DROP_1_0_ZIPWITH_min_0_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00204__LIST_INT_DROP_1_0_ZIPWITH_min_2_0,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00205__LIST_INT_DROP_1_0_ZIPWITH_min_2_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00206__LIST_INT_FILTER_<0_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00207__LIST_INT_FILTER_<0_0_TAKE_1_2,(lambda (lambda (filter (lambda (gt? 0 $0)) $1))),-14.652529,0.000000
+train,train_task_00208__LIST_INT_FILTER_>0_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00209__LIST_INT_FILTER_>0_0_TAKE_1_2,(lambda (lambda (filter (lambda (gt? $0 0)) $1))),-14.652529,0.000000
+train,train_task_00210__LIST_INT_FILTER_EVEN_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00212__LIST_INT_FILTER_ODD_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00214__LIST_INT_INT_DROP_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.890372,0.000000
+train,train_task_00215__LIST_INT_INT_DROP_1_0_TAKE_2_3,(lambda (lambda (lambda empty))),-2.890372,0.000000
+train,train_task_00216__LIST_INT_INT_DROP_2_0_DROP_1_3,(lambda (lambda (lambda empty))),-2.890372,0.000000
+train,train_task_00218__LIST_INT_INT_TAKE_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.890372,0.000000
+train,train_task_00220__LIST_INT_INT_TAKE_2_0_DROP_1_3,(lambda (lambda (lambda empty))),-2.890372,0.000000
+train,train_task_00222__LIST_INT_MAP_**2_0_ACCESS_1_2,(lambda (lambda (* $0 $0))),-8.671115,0.000000
+train,train_task_00223__LIST_INT_MAP_**2_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00225__LIST_INT_MAP_*-1_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00226__LIST_INT_MAP_*-1_0_TAKE_1_2,(lambda (lambda (map (lambda (negate $0)) $1))),-12.254634,0.000000
+train,train_task_00227__LIST_INT_MAP_*2_0_ACCESS_1_2,(lambda (lambda (* (index $0 $1) 2))),-14.451859,0.000000
+train,train_task_00228__LIST_INT_MAP_*2_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00229__LIST_INT_MAP_*3_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00231__LIST_INT_MAP_*4_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00237__LIST_INT_MAP__2_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00239__LIST_INT_MAP__3_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00241__LIST_INT_MAP__4_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00243__LIST_INT_REVERSE_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00244__LIST_INT_SCAN1L_*_0_ACCESS_1_2,(lambda (lambda 0)),-2.890372,0.000000
+train,train_task_00245__LIST_INT_SCAN1L_*_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00246__LIST_INT_SCAN1L_+_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00248__LIST_INT_SCAN1L_-_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00249__LIST_INT_SCAN1L_max_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00250__LIST_INT_SCAN1L_min_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00252__LIST_INT_SORT_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00258__LIST_INT_TAKE_1_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00263__LIST_INT_TAKE_1_0_HEAD_2,(lambda (lambda (car $1))),-5.780744,0.000000
+train,train_task_00265__LIST_INT_TAKE_1_0_MAP_*-1_2,(lambda (lambda (map (lambda (negate $0)) $1))),-12.254634,0.000000
+train,train_task_00273__LIST_INT_TAKE_1_0_MAXIMUM_2,(lambda (lambda (car (reverse (sort $1))))),-11.561487,0.000000
+train,train_task_00277__LIST_INT_TAKE_1_0_SORT_2,(lambda (lambda (sort $1))),-5.780744,0.000000
+train,train_task_00279__LIST_INT_TAKE_1_0_TAIL_2,(lambda (lambda (car (reverse $1)))),-8.671115,0.000000
+train,train_task_00280__LIST_INT_TAKE_1_0_TAKE_1_2,(lambda (lambda $1)),-2.890372,0.000000
+train,train_task_00286__LIST_INT_TAKE_1_0_ZIPWITH_-_2_2,(lambda (lambda (map (lambda 0) $1))),-8.671115,0.000000
+train,train_task_00287__LIST_INT_TAKE_1_0_ZIPWITH_max_0_2,(lambda (lambda $1)),-2.890372,0.000000
+train,train_task_00288__LIST_INT_TAKE_1_0_ZIPWITH_max_2_0,(lambda (lambda $1)),-2.890372,0.000000
+train,train_task_00289__LIST_INT_TAKE_1_0_ZIPWITH_max_2_2,(lambda (lambda $1)),-2.890372,0.000000
+train,train_task_00290__LIST_INT_TAKE_1_0_ZIPWITH_min_0_2,(lambda (lambda $1)),-2.890372,0.000000
+train,train_task_00291__LIST_INT_TAKE_1_0_ZIPWITH_min_2_0,(lambda (lambda $1)),-2.890372,0.000000
+train,train_task_00292__LIST_INT_TAKE_1_0_ZIPWITH_min_2_2,(lambda (lambda (if (is-square $0) empty $1))),-13.959382,0.000000
+train,train_task_00293__LIST_INT_ZIPWITH_*_0_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00296__LIST_INT_ZIPWITH_-_0_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00297__LIST_INT_ZIPWITH_-_0_0_TAKE_1_2,(lambda (lambda (map (lambda 0) $1))),-8.671115,0.000000
+train,train_task_00298__LIST_INT_ZIPWITH_max_0_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00300__LIST_INT_ZIPWITH_min_0_0_DROP_1_2,(lambda (lambda empty)),-2.890372,0.000000
+train,train_task_00301__LIST_INT_ZIPWITH_min_0_0_TAKE_1_2,(lambda (lambda $1)),-2.890372,0.000000
+train,train_task_00397__LIST_LIST_HEAD_0_ACCESS_2_1,(lambda (lambda (index (car $1) $0))),-12.833465,0.000000
+train,train_task_00400__LIST_LIST_HEAD_1_ACCESS_2_0,(lambda (lambda (index (car $0) $1))),-12.833465,0.000000
+train,train_task_00403__LIST_LIST_INT_ACCESS_2_0_DROP_3_1,(lambda (lambda (lambda empty))),-2.890372,0.000000
+train,train_task_00404__LIST_LIST_INT_ACCESS_2_0_TAKE_3_1,(lambda (lambda (lambda $1))),-3.583519,0.000000
+train,train_task_00405__LIST_LIST_INT_ACCESS_2_1_DROP_3_0,(lambda (lambda (lambda empty))),-2.890372,0.000000
+train,train_task_00406__LIST_LIST_INT_ACCESS_2_1_TAKE_3_0,(lambda (lambda (lambda $2))),-3.583519,0.000000
+train,train_task_00427__LIST_LIST_INT_ZIPWITH_*_0_1_DROP_2_3,(lambda (lambda (lambda empty))),-2.890372,0.000000
+train,train_task_00430__LIST_LIST_INT_ZIPWITH_*_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.890372,0.000000
+test,test_task_00003__LIST_FILTER_>0_0_MAP_*-1_1,(lambda (#(filter (lambda (gt? 1 $0))) (#(mapi (lambda (lambda (negate $0)))) $0))),-8.706687,0.000000
+test,test_task_00004__LIST_FILTER_>0_0_TAIL_1,(lambda (car (#(filter (lambda (gt? $0 0))) (reverse $0)))),-12.386743,0.000000
+test,test_task_00010__LIST_INT_TAKE_1_0_REVERSE_2,(lambda (lambda (reverse $1))),-5.575091,0.000000
+test,test_task_00012__LIST_INT_TAKE_1_0_ZIPWITH_+_2_2,(lambda (lambda (map (lambda (* $0 2)) $1))),-14.836367,0.000000
+test,test_task_00018__LIST_LIST_INT_DROP_2_0_ZIPWITH_+_1_3,(lambda (lambda (lambda empty))),-2.004352,0.000000
+test,test_task_00019__LIST_LIST_INT_DROP_2_1_ZIPWITH_+_3_0,(lambda (lambda (lambda empty))),-2.004352,0.000000
+test,test_task_00056__LIST_MAP_**2_0_FILTER_<0_1,(lambda empty),-2.004352,0.000000
+test,test_task_00057__LIST_MAP_*-1_0_COUNT_>0_1,(lambda (length (#(filter (lambda (gt? 1 $0))) $0))),-8.269301,0.000000
+test,test_task_00059__LIST_MAP_*-1_0_TAIL_1,(lambda (negate (car (reverse $0)))),-11.987470,0.000000
+test,test_task_00065__LIST_MAP_*4_0_ZIPWITH_-_1_0,(lambda (map (lambda (* $0 3)) $0)),-14.157169,0.000000
+test,test_task_00066__LIST_MAP_+1_0_COUNT_>0_1,(lambda (length (#(filter (lambda (gt? $0 0))) $0))),-8.299043,0.000000
+test,test_task_00068__LIST_MAP_+1_0_ZIPWITH_max_1_0,(lambda (map (lambda (+ $0 1)) $0)),-14.233465,0.000000
+test,test_task_00082__LIST_SCAN1L_max_0_ZIPWITH_min_1_0,(lambda $0),-2.496420,0.000000
+test,test_task_00090__LIST_ZIPWITH_-_0_0_MAP__4_1,(lambda (map (lambda 0) $0)),-8.192083,0.000000
+test,test_task_00091__LIST_ZIPWITH_-_0_0_MAXIMUM_1,(lambda 0),-2.483482,0.000000
+test,test_task_00092__LIST_ZIPWITH_-_0_0_ZIPWITH_+_1_0,(lambda $0),-2.496420,0.000000
+test,test_task_00093__LIST_ZIPWITH_max_0_0_COUNT_>0_1,(lambda (length (#(filter (lambda (gt? $0 0))) $0))),-8.299043,0.000000
+test,test_task_00094__LIST_ZIPWITH_max_0_0_TAIL_1,(lambda (car (reverse $0))),-9.282124,0.000000
+test,test_task_00095__LIST_ZIPWITH_max_0_0_ZIPWITH_+_1_0,(lambda (map (lambda (* $0 2)) $0)),-14.143219,0.000000
+test,test_task_00096__LIST_ZIPWITH_min_0_0_FILTER_>0_1,(lambda (#(filter (lambda (gt? $0 0))) $0)),-5.601040,0.000000
+test,test_task_00097__LIST_ZIPWITH_min_0_0_ZIPWITH_*_1_0,(lambda (map (lambda (* $0 $0)) $0)),-14.450699,0.000000
+test,test_task_00098__LIST_ZIPWITH_min_0_0_ZIPWITH_min_1_0,(lambda $0),-2.496420,0.000000
+train,train_task_00002__LIST_COUNT_>0_0_ACCESS_1_0,(lambda (index (length (#(filter (lambda (gt? $0 0))) $0)) $0)),-14.532505,0.000000
+train,train_task_00011__LIST_FILTER_<0_0_FILTER_<0_1,(lambda (#(filter (lambda (gt? 1 $0))) $0)),-5.571297,0.000000
+train,train_task_00014__LIST_FILTER_<0_0_HEAD_1,(lambda (car (#(filter (lambda (gt? 1 $0))) $0))),-9.278330,0.000000
+train,train_task_00015__LIST_FILTER_<0_0_MAP_*-1_1,(lambda (#(mapi (lambda (lambda (negate $0)))) (#(filter (lambda (gt? 1 $0))) $0))),-8.706687,0.000000
+train,train_task_00024__LIST_FILTER_<0_0_MAXIMUM_1,(lambda (#(lambda (car (reverse (sort $0)))) (#(filter (lambda (gt? 1 $0))) $0))),-8.228073,0.000000
+train,train_task_00025__LIST_FILTER_<0_0_MINIMUM_1,(lambda (car (sort $0))),-9.244281,0.000000
+train,train_task_00026__LIST_FILTER_<0_0_REVERSE_1,(lambda (#(filter (lambda (gt? 1 $0))) (reverse $0))),-8.649969,0.000000
+train,train_task_00032__LIST_FILTER_<0_0_SORT_1,(lambda (#(filter (lambda (gt? 1 $0))) (sort $0))),-8.612127,0.000000
+train,train_task_00034__LIST_FILTER_<0_0_TAIL_1,(lambda (car (#(filter (lambda (gt? 1 $0))) (reverse $0)))),-12.357001,0.000000
+train,train_task_00040__LIST_FILTER_<0_0_ZIPWITH_-_1_1,(lambda (map (lambda 0) (#(filter (lambda (gt? 1 $0))) $0))),-11.266960,0.000000
+train,train_task_00041__LIST_FILTER_<0_0_ZIPWITH_max_1_1,(lambda (#(filter (lambda (gt? 1 $0))) $0)),-5.571297,0.000000
+train,train_task_00044__LIST_FILTER_<0_0_ZIPWITH_min_1_1,(lambda (#(filter (lambda (gt? 1 $0))) $0)),-5.571297,0.000000
+train,train_task_00048__LIST_FILTER_>0_0_HEAD_1,(lambda (car (#(filter (lambda (gt? $0 0))) $0))),-9.308072,0.000000
+train,train_task_00057__LIST_FILTER_>0_0_MAXIMUM_1,(lambda (#(lambda (car (reverse (sort $0)))) $0)),-5.153195,0.000000
+train,train_task_00058__LIST_FILTER_>0_0_MINIMUM_1,(lambda (car (#(filter (lambda (gt? $0 0))) (sort $0)))),-12.348901,0.000000
+train,train_task_00059__LIST_FILTER_>0_0_REVERSE_1,(lambda (#(filter (lambda (gt? $0 0))) (reverse $0))),-8.679711,0.000000
+train,train_task_00060__LIST_FILTER_>0_0_SCAN1L_*_1,(lambda (#(filter (lambda (gt? $0 0))) $0)),-5.601040,0.000000
+train,train_task_00065__LIST_FILTER_>0_0_SORT_1,(lambda (#(filter (lambda (gt? $0 0))) (sort $0))),-8.641869,0.000000
+train,train_task_00075__LIST_FILTER_>0_0_ZIPWITH_-_1_1,(lambda (map (lambda 0) (#(filter (lambda (gt? $0 0))) $0))),-11.296703,0.000000
+train,train_task_00076__LIST_FILTER_>0_0_ZIPWITH_max_0_1,(lambda (#(filter (lambda (gt? $0 0))) $0)),-5.601040,0.000000
+train,train_task_00159__LIST_HEAD_0_ACCESS_1_0,(lambda (index (car $0) $0)),-12.436914,0.000000
+train,train_task_00161__LIST_INT_ACCESS_1_0_DROP_2_0,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00162__LIST_INT_ACCESS_1_0_TAKE_2_0,(lambda (lambda $1)),-2.496420,0.000000
+train,train_task_00163__LIST_INT_DROP_1_0_COUNT_<0_2,(lambda (lambda 0)),-2.532365,0.000000
+train,train_task_00164__LIST_INT_DROP_1_0_COUNT_>0_2,(lambda (lambda 0)),-2.532365,0.000000
+train,train_task_00165__LIST_INT_DROP_1_0_COUNT_EVEN_2,(lambda (lambda 0)),-2.532365,0.000000
+train,train_task_00166__LIST_INT_DROP_1_0_COUNT_ODD_2,(lambda (lambda 0)),-2.532365,0.000000
+train,train_task_00167__LIST_INT_DROP_1_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00168__LIST_INT_DROP_1_0_FILTER_<0_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00170__LIST_INT_DROP_1_0_FILTER_EVEN_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00171__LIST_INT_DROP_1_0_FILTER_ODD_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00172__LIST_INT_DROP_1_0_MAP_**2_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00173__LIST_INT_DROP_1_0_MAP_*-1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00175__LIST_INT_DROP_1_0_MAP_*3_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00176__LIST_INT_DROP_1_0_MAP_*4_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00177__LIST_INT_DROP_1_0_MAP_+1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00178__LIST_INT_DROP_1_0_MAP_-1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00179__LIST_INT_DROP_1_0_MAP__2_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00180__LIST_INT_DROP_1_0_MAP__3_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00181__LIST_INT_DROP_1_0_MAP__4_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00182__LIST_INT_DROP_1_0_REVERSE_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00183__LIST_INT_DROP_1_0_SCAN1L_*_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00184__LIST_INT_DROP_1_0_SCAN1L_+_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00185__LIST_INT_DROP_1_0_SCAN1L_-_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00186__LIST_INT_DROP_1_0_SCAN1L_max_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00188__LIST_INT_DROP_1_0_SORT_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00189__LIST_INT_DROP_1_0_SUM_2,(lambda (lambda 0)),-2.532365,0.000000
+train,train_task_00190__LIST_INT_DROP_1_0_TAKE_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00191__LIST_INT_DROP_1_0_ZIPWITH_*_0_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00193__LIST_INT_DROP_1_0_ZIPWITH_*_2_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00194__LIST_INT_DROP_1_0_ZIPWITH_+_0_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00195__LIST_INT_DROP_1_0_ZIPWITH_+_2_0,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00196__LIST_INT_DROP_1_0_ZIPWITH_+_2_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00197__LIST_INT_DROP_1_0_ZIPWITH_-_0_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00198__LIST_INT_DROP_1_0_ZIPWITH_-_2_0,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00199__LIST_INT_DROP_1_0_ZIPWITH_-_2_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00200__LIST_INT_DROP_1_0_ZIPWITH_max_0_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00201__LIST_INT_DROP_1_0_ZIPWITH_max_2_0,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00202__LIST_INT_DROP_1_0_ZIPWITH_max_2_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00203__LIST_INT_DROP_1_0_ZIPWITH_min_0_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00204__LIST_INT_DROP_1_0_ZIPWITH_min_2_0,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00205__LIST_INT_DROP_1_0_ZIPWITH_min_2_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00206__LIST_INT_FILTER_<0_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00207__LIST_INT_FILTER_<0_0_TAKE_1_2,(lambda (lambda (#(filter (lambda (gt? 1 $0))) $1))),-5.571297,0.000000
+train,train_task_00208__LIST_INT_FILTER_>0_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00209__LIST_INT_FILTER_>0_0_TAKE_1_2,(lambda (lambda (#(filter (lambda (gt? $0 0))) $1))),-5.601040,0.000000
+train,train_task_00210__LIST_INT_FILTER_EVEN_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00212__LIST_INT_FILTER_ODD_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00214__LIST_INT_INT_DROP_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.004352,0.000000
+train,train_task_00215__LIST_INT_INT_DROP_1_0_TAKE_2_3,(lambda (lambda (lambda empty))),-2.004352,0.000000
+train,train_task_00216__LIST_INT_INT_DROP_2_0_DROP_1_3,(lambda (lambda (lambda empty))),-2.004352,0.000000
+train,train_task_00218__LIST_INT_INT_TAKE_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.004352,0.000000
+train,train_task_00220__LIST_INT_INT_TAKE_2_0_DROP_1_3,(lambda (lambda (lambda empty))),-2.004352,0.000000
+train,train_task_00222__LIST_INT_MAP_**2_0_ACCESS_1_2,(lambda (lambda (* $0 $0))),-8.790982,0.000000
+train,train_task_00223__LIST_INT_MAP_**2_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00225__LIST_INT_MAP_*-1_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00226__LIST_INT_MAP_*-1_0_TAKE_1_2,(lambda (lambda (#(mapi (lambda (lambda (negate $0)))) $1))),-5.631810,0.000000
+train,train_task_00227__LIST_INT_MAP_*2_0_ACCESS_1_2,(lambda (lambda (* (index 3 $1) 2))),-14.472316,0.000000
+train,train_task_00228__LIST_INT_MAP_*2_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00229__LIST_INT_MAP_*3_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00231__LIST_INT_MAP_*4_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00232__LIST_INT_MAP_*4_0_TAKE_1_2,(lambda (lambda (map (lambda (* $0 4)) $1))),-14.869285,0.000000
+train,train_task_00236__LIST_INT_MAP_-1_0_TAKE_1_2,(lambda (lambda (map (lambda (- $0 1)) $1))),-14.928068,0.000000
+train,train_task_00237__LIST_INT_MAP__2_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00239__LIST_INT_MAP__3_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00241__LIST_INT_MAP__4_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00243__LIST_INT_REVERSE_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00244__LIST_INT_SCAN1L_*_0_ACCESS_1_2,(lambda (lambda 0)),-2.532365,0.000000
+train,train_task_00245__LIST_INT_SCAN1L_*_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00246__LIST_INT_SCAN1L_+_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00248__LIST_INT_SCAN1L_-_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00249__LIST_INT_SCAN1L_max_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00250__LIST_INT_SCAN1L_min_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00252__LIST_INT_SORT_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00255__LIST_INT_TAKE_1_0_COUNT_>0_2,(lambda (lambda (length (#(filter (lambda (gt? $0 0))) $1)))),-8.347927,0.000000
+train,train_task_00258__LIST_INT_TAKE_1_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00263__LIST_INT_TAKE_1_0_HEAD_2,(lambda (lambda (car $1))),-6.252335,0.000000
+train,train_task_00265__LIST_INT_TAKE_1_0_MAP_*-1_2,(lambda (lambda (#(mapi (lambda (lambda (negate $0)))) $1))),-5.631810,0.000000
+train,train_task_00266__LIST_INT_TAKE_1_0_MAP_*3_2,(lambda (lambda (map (lambda (* 3 $0)) $1))),-14.850316,0.000000
+train,train_task_00267__LIST_INT_TAKE_1_0_MAP_*4_2,(lambda (lambda (map (lambda (* $0 4)) $1))),-14.869285,0.000000
+train,train_task_00269__LIST_INT_TAKE_1_0_MAP_-1_2,(lambda (lambda (map (lambda (- $0 1)) $1))),-14.928068,0.000000
+train,train_task_00273__LIST_INT_TAKE_1_0_MAXIMUM_2,(lambda (lambda (#(lambda (car (reverse (sort $0)))) $1))),-5.202078,0.000000
+train,train_task_00277__LIST_INT_TAKE_1_0_SORT_2,(lambda (lambda (sort $1))),-5.537249,0.000000
+train,train_task_00279__LIST_INT_TAKE_1_0_TAIL_2,(lambda (lambda (car (reverse $1)))),-9.331007,0.000000
+train,train_task_00280__LIST_INT_TAKE_1_0_TAKE_1_2,(lambda (lambda $1)),-2.496420,0.000000
+train,train_task_00286__LIST_INT_TAKE_1_0_ZIPWITH_-_2_2,(lambda (lambda (map (lambda 0) $1))),-8.192083,0.000000
+train,train_task_00287__LIST_INT_TAKE_1_0_ZIPWITH_max_0_2,(lambda (lambda $1)),-2.496420,0.000000
+train,train_task_00288__LIST_INT_TAKE_1_0_ZIPWITH_max_2_0,(lambda (lambda $1)),-2.496420,0.000000
+train,train_task_00289__LIST_INT_TAKE_1_0_ZIPWITH_max_2_2,(lambda (lambda $1)),-2.496420,0.000000
+train,train_task_00290__LIST_INT_TAKE_1_0_ZIPWITH_min_0_2,(lambda (lambda $1)),-2.496420,0.000000
+train,train_task_00291__LIST_INT_TAKE_1_0_ZIPWITH_min_2_0,(lambda (lambda $1)),-2.496420,0.000000
+train,train_task_00292__LIST_INT_TAKE_1_0_ZIPWITH_min_2_2,(lambda (lambda (if (is-square $0) empty $1))),-12.819219,0.000000
+train,train_task_00293__LIST_INT_ZIPWITH_*_0_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00296__LIST_INT_ZIPWITH_-_0_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00297__LIST_INT_ZIPWITH_-_0_0_TAKE_1_2,(lambda (lambda (map (lambda 0) $1))),-8.192083,0.000000
+train,train_task_00298__LIST_INT_ZIPWITH_max_0_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00300__LIST_INT_ZIPWITH_min_0_0_DROP_1_2,(lambda (lambda empty)),-2.004352,0.000000
+train,train_task_00301__LIST_INT_ZIPWITH_min_0_0_TAKE_1_2,(lambda (lambda $1)),-2.496420,0.000000
+train,train_task_00302__LIST_LIST_COUNT_<0_0_ACCESS_2_1,(lambda (lambda (index (length (#(filter (lambda (gt? 1 $0))) $1)) $0))),-15.889057,0.000000
+train,train_task_00304__LIST_LIST_COUNT_<0_1_ACCESS_2_0,(lambda (lambda (index (length (#(filter (lambda (gt? 1 $0))) $0)) $1))),-15.889057,0.000000
+train,train_task_00307__LIST_LIST_COUNT_>0_0_ACCESS_2_1,(lambda (lambda (index (length (#(filter (lambda (gt? $0 0))) $1)) $0))),-15.918799,0.000000
+train,train_task_00310__LIST_LIST_COUNT_>0_1_ACCESS_2_0,(lambda (lambda (index (length (#(filter (lambda (gt? $0 0))) $0)) $1))),-15.918799,0.000000
+train,train_task_00397__LIST_LIST_HEAD_0_ACCESS_2_1,(lambda (lambda (index (car $1) $0))),-13.823208,0.000000
+train,train_task_00400__LIST_LIST_HEAD_1_ACCESS_2_0,(lambda (lambda (index (car $0) $1))),-13.823208,0.000000
+train,train_task_00403__LIST_LIST_INT_ACCESS_2_0_DROP_3_1,(lambda (lambda (lambda empty))),-2.004352,0.000000
+train,train_task_00404__LIST_LIST_INT_ACCESS_2_0_TAKE_3_1,(lambda (lambda (lambda $1))),-3.189567,0.000000
+train,train_task_00405__LIST_LIST_INT_ACCESS_2_1_DROP_3_0,(lambda (lambda (lambda empty))),-2.004352,0.000000
+train,train_task_00406__LIST_LIST_INT_ACCESS_2_1_TAKE_3_0,(lambda (lambda (lambda $2))),-3.189567,0.000000
+train,train_task_00427__LIST_LIST_INT_ZIPWITH_*_0_1_DROP_2_3,(lambda (lambda (lambda empty))),-2.004352,0.000000
+train,train_task_00430__LIST_LIST_INT_ZIPWITH_*_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.004352,0.000000
+test,test_task_00003__LIST_FILTER_>0_0_MAP_*-1_1,(lambda (#(filter (lambda (gt? 1 $0))) (#(mapi (lambda (lambda (negate $0)))) $0))),-8.440552,0.000000
+test,test_task_00004__LIST_FILTER_>0_0_TAIL_1,(lambda (car (#(filter (lambda (gt? $0 0))) (reverse $0)))),-12.355293,0.000000
+test,test_task_00010__LIST_INT_TAKE_1_0_REVERSE_2,(lambda (lambda (reverse $1))),-5.440177,0.000000
+test,test_task_00012__LIST_INT_TAKE_1_0_ZIPWITH_+_2_2,(lambda (lambda (map (lambda (* $0 2)) $1))),-14.827867,0.000000
+test,test_task_00018__LIST_LIST_INT_DROP_2_0_ZIPWITH_+_1_3,(lambda (lambda (lambda empty))),-2.149294,0.000000
+test,test_task_00019__LIST_LIST_INT_DROP_2_1_ZIPWITH_+_3_0,(lambda (lambda (lambda empty))),-2.149294,0.000000
+test,test_task_00056__LIST_MAP_**2_0_FILTER_<0_1,(lambda empty),-2.149294,0.000000
+test,test_task_00057__LIST_MAP_*-1_0_COUNT_>0_1,(lambda (length (#(filter (lambda (gt? 1 $0))) $0))),-8.033532,0.000000
+test,test_task_00059__LIST_MAP_*-1_0_TAIL_1,(lambda (negate (car (reverse $0)))),-12.183333,0.000000
+test,test_task_00064__LIST_MAP_*4_0_REVERSE_1,(lambda (#(map (lambda (* $0 4))) (reverse $0))),-8.727959,0.000000
+test,test_task_00065__LIST_MAP_*4_0_ZIPWITH_-_1_0,(lambda (map (lambda (* $0 3)) $0)),-14.121592,0.000000
+test,test_task_00066__LIST_MAP_+1_0_COUNT_>0_1,(lambda (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) $0)),-5.030894,0.000000
+test,test_task_00067__LIST_MAP_+1_0_REVERSE_1,(lambda (#(mapi (lambda (lambda (negate $0)))) (#(map (lambda (- $0 1))) (#(mapi (lambda (lambda (negate $0)))) (reverse $0))))),-15.102141,0.000000
+test,test_task_00068__LIST_MAP_+1_0_ZIPWITH_max_1_0,(lambda (#(mapi (lambda (lambda (negate $0)))) (#(map (lambda (- $0 1))) (#(mapi (lambda (lambda (negate $0)))) $0)))),-11.948276,0.000000
+test,test_task_00069__LIST_MAP_-1_0_FILTER_>0_1,(lambda (#(filter (lambda (gt? $0 0))) (#(map (lambda (- $0 1))) $0))),-8.598756,0.000000
+test,test_task_00082__LIST_SCAN1L_max_0_ZIPWITH_min_1_0,(lambda $0),-2.286313,0.000000
+test,test_task_00090__LIST_ZIPWITH_-_0_0_MAP__4_1,(lambda (map (lambda 0) $0)),-8.171103,0.000000
+test,test_task_00091__LIST_ZIPWITH_-_0_0_MAXIMUM_1,(lambda 0),-2.574674,0.000000
+test,test_task_00092__LIST_ZIPWITH_-_0_0_ZIPWITH_+_1_0,(lambda $0),-2.286313,0.000000
+test,test_task_00093__LIST_ZIPWITH_max_0_0_COUNT_>0_1,(lambda (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) $0)),-5.030894,0.000000
+test,test_task_00094__LIST_ZIPWITH_max_0_0_TAIL_1,(lambda (car (reverse $0))),-9.330626,0.000000
+test,test_task_00095__LIST_ZIPWITH_max_0_0_ZIPWITH_+_1_0,(lambda (map (lambda (* $0 2)) $0)),-14.134719,0.000000
+test,test_task_00096__LIST_ZIPWITH_min_0_0_FILTER_>0_1,(lambda (#(filter (lambda (gt? $0 0))) $0)),-5.310980,0.000000
+test,test_task_00097__LIST_ZIPWITH_min_0_0_ZIPWITH_*_1_0,(lambda (map (lambda (* $0 $0)) $0)),-14.107990,0.000000
+test,test_task_00098__LIST_ZIPWITH_min_0_0_ZIPWITH_min_1_0,(lambda $0),-2.286313,0.000000
+train,train_task_00000__LIST_COUNT_<0_0_ACCESS_1_0,(lambda (index (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) (#(mapi (lambda (lambda (negate $0)))) $0)) $0)),-14.324537,0.000000
+train,train_task_00002__LIST_COUNT_>0_0_ACCESS_1_0,(lambda (index (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) $0) $0)),-11.137443,0.000000
+train,train_task_00003__LIST_COUNT_>0_0_DROP_1_0,(lambda (slice (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) $0) 0 $0)),-13.244195,0.000000
+train,train_task_00011__LIST_FILTER_<0_0_FILTER_<0_1,(lambda (#(filter (lambda (gt? 1 $0))) $0)),-5.253458,0.000000
+train,train_task_00014__LIST_FILTER_<0_0_HEAD_1,(lambda (#(lambda (car (#(filter (lambda (gt? 1 $0))) $0))) $0)),-5.061757,0.000000
+train,train_task_00015__LIST_FILTER_<0_0_MAP_*-1_1,(lambda (#(mapi (lambda (lambda (negate $0)))) (#(filter (lambda (gt? 1 $0))) $0))),-8.440552,0.000000
+train,train_task_00018__LIST_FILTER_<0_0_MAP_*4_1,(lambda (#(filter (lambda (gt? 1 $0))) (#(map (lambda (* $0 4))) $0))),-8.541240,0.000000
+train,train_task_00019__LIST_FILTER_<0_0_MAP_+1_1,(lambda (#(filter (lambda (gt? 1 $0))) (#(mapi (lambda (lambda (negate $0)))) (#(map (lambda (- $0 1))) (#(mapi (lambda (lambda (negate $0)))) $0))))),-14.915422,0.000000
+train,train_task_00020__LIST_FILTER_<0_0_MAP_-1_1,(lambda (#(filter (lambda (gt? 1 $0))) (#(map (lambda (- $0 1))) $0))),-8.541234,0.000000
+train,train_task_00024__LIST_FILTER_<0_0_MAXIMUM_1,(lambda (#(lambda (car (reverse (sort $0)))) (#(filter (lambda (gt? 1 $0))) $0))),-8.020479,0.000000
+train,train_task_00025__LIST_FILTER_<0_0_MINIMUM_1,(lambda (#(lambda (car (#(filter (lambda (gt? 1 $0))) $0))) $0)),-5.061757,0.000000
+train,train_task_00026__LIST_FILTER_<0_0_REVERSE_1,(lambda (#(filter (lambda (gt? 1 $0))) (reverse $0))),-8.407323,0.000000
+train,train_task_00032__LIST_FILTER_<0_0_SORT_1,(lambda (#(filter (lambda (gt? 1 $0))) (sort $0))),-8.403978,0.000000
+train,train_task_00034__LIST_FILTER_<0_0_TAIL_1,(lambda (#(lambda (car (#(filter (lambda (gt? 1 $0))) $0))) (reverse $0))),-8.215622,0.000000
+train,train_task_00040__LIST_FILTER_<0_0_ZIPWITH_-_1_1,(lambda (map (lambda 0) (#(filter (lambda (gt? 1 $0))) $0))),-11.138249,0.000000
+train,train_task_00041__LIST_FILTER_<0_0_ZIPWITH_max_1_1,(lambda (#(filter (lambda (gt? 1 $0))) $0)),-5.253458,0.000000
+train,train_task_00044__LIST_FILTER_<0_0_ZIPWITH_min_1_1,(lambda (#(filter (lambda (gt? 1 $0))) $0)),-5.253458,0.000000
+train,train_task_00048__LIST_FILTER_>0_0_HEAD_1,(lambda (car (#(filter (lambda (gt? $0 0))) $0))),-9.201428,0.000000
+train,train_task_00052__LIST_FILTER_>0_0_MAP_*4_1,(lambda (#(filter (lambda (gt? $0 0))) (#(map (lambda (* $0 4))) $0))),-8.598762,0.000000
+train,train_task_00053__LIST_FILTER_>0_0_MAP_+1_1,(lambda (#(mapi (lambda (lambda (negate $0)))) (#(map (lambda (- $0 1))) (#(mapi (lambda (lambda (negate $0)))) (#(filter (lambda (gt? $0 0))) $0))))),-14.972943,0.000000
+train,train_task_00057__LIST_FILTER_>0_0_MAXIMUM_1,(lambda (#(lambda (car (reverse (sort $0)))) $0)),-5.053333,0.000000
+train,train_task_00058__LIST_FILTER_>0_0_MINIMUM_1,(lambda (car (#(filter (lambda (gt? $0 0))) (sort $0)))),-12.351948,0.000000
+train,train_task_00059__LIST_FILTER_>0_0_REVERSE_1,(lambda (#(filter (lambda (gt? $0 0))) (reverse $0))),-8.464844,0.000000
+train,train_task_00060__LIST_FILTER_>0_0_SCAN1L_*_1,(lambda (#(filter (lambda (gt? $0 0))) $0)),-5.310980,0.000000
+train,train_task_00065__LIST_FILTER_>0_0_SORT_1,(lambda (#(filter (lambda (gt? $0 0))) (sort $0))),-8.461500,0.000000
+train,train_task_00075__LIST_FILTER_>0_0_ZIPWITH_-_1_1,(lambda (map (lambda 0) (#(filter (lambda (gt? $0 0))) $0))),-11.195770,0.000000
+train,train_task_00076__LIST_FILTER_>0_0_ZIPWITH_max_0_1,(lambda (#(filter (lambda (gt? $0 0))) $0)),-5.310980,0.000000
+train,train_task_00159__LIST_HEAD_0_ACCESS_1_0,(lambda (index (car $0) $0)),-12.283311,0.000000
+train,train_task_00161__LIST_INT_ACCESS_1_0_DROP_2_0,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00162__LIST_INT_ACCESS_1_0_TAKE_2_0,(lambda (lambda $1)),-2.286313,0.000000
+train,train_task_00163__LIST_INT_DROP_1_0_COUNT_<0_2,(lambda (lambda 0)),-2.633091,0.000000
+train,train_task_00164__LIST_INT_DROP_1_0_COUNT_>0_2,(lambda (lambda 0)),-2.633091,0.000000
+train,train_task_00165__LIST_INT_DROP_1_0_COUNT_EVEN_2,(lambda (lambda 0)),-2.633091,0.000000
+train,train_task_00166__LIST_INT_DROP_1_0_COUNT_ODD_2,(lambda (lambda 0)),-2.633091,0.000000
+train,train_task_00167__LIST_INT_DROP_1_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00168__LIST_INT_DROP_1_0_FILTER_<0_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00170__LIST_INT_DROP_1_0_FILTER_EVEN_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00171__LIST_INT_DROP_1_0_FILTER_ODD_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00172__LIST_INT_DROP_1_0_MAP_**2_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00173__LIST_INT_DROP_1_0_MAP_*-1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00175__LIST_INT_DROP_1_0_MAP_*3_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00176__LIST_INT_DROP_1_0_MAP_*4_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00177__LIST_INT_DROP_1_0_MAP_+1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00178__LIST_INT_DROP_1_0_MAP_-1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00179__LIST_INT_DROP_1_0_MAP__2_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00180__LIST_INT_DROP_1_0_MAP__3_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00181__LIST_INT_DROP_1_0_MAP__4_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00182__LIST_INT_DROP_1_0_REVERSE_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00183__LIST_INT_DROP_1_0_SCAN1L_*_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00184__LIST_INT_DROP_1_0_SCAN1L_+_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00185__LIST_INT_DROP_1_0_SCAN1L_-_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00186__LIST_INT_DROP_1_0_SCAN1L_max_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00188__LIST_INT_DROP_1_0_SORT_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00189__LIST_INT_DROP_1_0_SUM_2,(lambda (lambda 0)),-2.633091,0.000000
+train,train_task_00190__LIST_INT_DROP_1_0_TAKE_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00191__LIST_INT_DROP_1_0_ZIPWITH_*_0_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00193__LIST_INT_DROP_1_0_ZIPWITH_*_2_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00194__LIST_INT_DROP_1_0_ZIPWITH_+_0_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00195__LIST_INT_DROP_1_0_ZIPWITH_+_2_0,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00196__LIST_INT_DROP_1_0_ZIPWITH_+_2_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00197__LIST_INT_DROP_1_0_ZIPWITH_-_0_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00198__LIST_INT_DROP_1_0_ZIPWITH_-_2_0,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00199__LIST_INT_DROP_1_0_ZIPWITH_-_2_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00200__LIST_INT_DROP_1_0_ZIPWITH_max_0_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00201__LIST_INT_DROP_1_0_ZIPWITH_max_2_0,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00202__LIST_INT_DROP_1_0_ZIPWITH_max_2_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00203__LIST_INT_DROP_1_0_ZIPWITH_min_0_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00204__LIST_INT_DROP_1_0_ZIPWITH_min_2_0,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00205__LIST_INT_DROP_1_0_ZIPWITH_min_2_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00206__LIST_INT_FILTER_<0_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00207__LIST_INT_FILTER_<0_0_TAKE_1_2,(lambda (lambda (#(filter (lambda (gt? 1 $0))) $1))),-5.253458,0.000000
+train,train_task_00208__LIST_INT_FILTER_>0_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00209__LIST_INT_FILTER_>0_0_TAKE_1_2,(lambda (lambda (#(filter (lambda (gt? $0 0))) $1))),-5.310980,0.000000
+train,train_task_00210__LIST_INT_FILTER_EVEN_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00212__LIST_INT_FILTER_ODD_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00214__LIST_INT_INT_DROP_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00215__LIST_INT_INT_DROP_1_0_TAKE_2_3,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00216__LIST_INT_INT_DROP_2_0_DROP_1_3,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00218__LIST_INT_INT_TAKE_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00220__LIST_INT_INT_TAKE_2_0_DROP_1_3,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00222__LIST_INT_MAP_**2_0_ACCESS_1_2,(lambda (lambda (* $0 $0))),-8.569978,0.000000
+train,train_task_00223__LIST_INT_MAP_**2_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00225__LIST_INT_MAP_*-1_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00226__LIST_INT_MAP_*-1_0_TAKE_1_2,(lambda (lambda (#(mapi (lambda (lambda (negate $0)))) $1))),-5.473407,0.000000
+train,train_task_00227__LIST_INT_MAP_*2_0_ACCESS_1_2,(lambda (lambda (* (index $0 $1) 2))),-14.761673,0.000000
+train,train_task_00228__LIST_INT_MAP_*2_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00229__LIST_INT_MAP_*3_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00231__LIST_INT_MAP_*4_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00232__LIST_INT_MAP_*4_0_TAKE_1_2,(lambda (lambda (#(map (lambda (* $0 4))) $1))),-5.574095,0.000000
+train,train_task_00236__LIST_INT_MAP_-1_0_TAKE_1_2,(lambda (lambda (#(map (lambda (- $0 1))) $1))),-5.574089,0.000000
+train,train_task_00237__LIST_INT_MAP__2_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00239__LIST_INT_MAP__3_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00241__LIST_INT_MAP__4_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00243__LIST_INT_REVERSE_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00244__LIST_INT_SCAN1L_*_0_ACCESS_1_2,(lambda (lambda 0)),-2.633091,0.000000
+train,train_task_00245__LIST_INT_SCAN1L_*_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00246__LIST_INT_SCAN1L_+_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00248__LIST_INT_SCAN1L_-_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00249__LIST_INT_SCAN1L_max_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00250__LIST_INT_SCAN1L_min_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00252__LIST_INT_SORT_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00255__LIST_INT_TAKE_1_0_COUNT_>0_2,(lambda (lambda (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) $1))),-5.089311,0.000000
+train,train_task_00258__LIST_INT_TAKE_1_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00263__LIST_INT_TAKE_1_0_HEAD_2,(lambda (lambda (car $1))),-6.235178,0.000000
+train,train_task_00265__LIST_INT_TAKE_1_0_MAP_*-1_2,(lambda (lambda (#(mapi (lambda (lambda (negate $0)))) $1))),-5.473407,0.000000
+train,train_task_00266__LIST_INT_TAKE_1_0_MAP_*3_2,(lambda (lambda (map (lambda (* $0 3)) $1))),-14.814739,0.000000
+train,train_task_00267__LIST_INT_TAKE_1_0_MAP_*4_2,(lambda (lambda (#(map (lambda (* $0 4))) $1))),-5.574095,0.000000
+train,train_task_00269__LIST_INT_TAKE_1_0_MAP_-1_2,(lambda (lambda (#(map (lambda (- $0 1))) $1))),-5.574089,0.000000
+train,train_task_00273__LIST_INT_TAKE_1_0_MAXIMUM_2,(lambda (lambda (#(lambda (car (reverse (sort $0)))) $1))),-5.111750,0.000000
+train,train_task_00277__LIST_INT_TAKE_1_0_SORT_2,(lambda (lambda (sort $1))),-5.436833,0.000000
+train,train_task_00279__LIST_INT_TAKE_1_0_TAIL_2,(lambda (lambda (car (reverse $1)))),-9.389043,0.000000
+train,train_task_00280__LIST_INT_TAKE_1_0_TAKE_1_2,(lambda (lambda $1)),-2.286313,0.000000
+train,train_task_00286__LIST_INT_TAKE_1_0_ZIPWITH_-_2_2,(lambda (lambda (map (lambda 0) $1))),-8.171103,0.000000
+train,train_task_00287__LIST_INT_TAKE_1_0_ZIPWITH_max_0_2,(lambda (lambda $1)),-2.286313,0.000000
+train,train_task_00288__LIST_INT_TAKE_1_0_ZIPWITH_max_2_0,(lambda (lambda $1)),-2.286313,0.000000
+train,train_task_00289__LIST_INT_TAKE_1_0_ZIPWITH_max_2_2,(lambda (lambda $1)),-2.286313,0.000000
+train,train_task_00290__LIST_INT_TAKE_1_0_ZIPWITH_min_0_2,(lambda (lambda $1)),-2.286313,0.000000
+train,train_task_00291__LIST_INT_TAKE_1_0_ZIPWITH_min_2_0,(lambda (lambda $1)),-2.286313,0.000000
+train,train_task_00292__LIST_INT_TAKE_1_0_ZIPWITH_min_2_2,(lambda (lambda (if (is-square $0) empty $1))),-12.730025,0.000000
+train,train_task_00293__LIST_INT_ZIPWITH_*_0_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00296__LIST_INT_ZIPWITH_-_0_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00297__LIST_INT_ZIPWITH_-_0_0_TAKE_1_2,(lambda (lambda (map (lambda 0) $1))),-8.171103,0.000000
+train,train_task_00298__LIST_INT_ZIPWITH_max_0_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00300__LIST_INT_ZIPWITH_min_0_0_DROP_1_2,(lambda (lambda empty)),-2.149294,0.000000
+train,train_task_00301__LIST_INT_ZIPWITH_min_0_0_TAKE_1_2,(lambda (lambda $1)),-2.286313,0.000000
+train,train_task_00302__LIST_LIST_COUNT_<0_0_ACCESS_2_1,(lambda (lambda (index (length (#(filter (lambda (gt? 1 $0))) $1)) $0))),-15.526375,0.000000
+train,train_task_00304__LIST_LIST_COUNT_<0_1_ACCESS_2_0,(lambda (lambda (index (length (#(filter (lambda (gt? 1 $0))) $0)) $1))),-15.526375,0.000000
+train,train_task_00307__LIST_LIST_COUNT_>0_0_ACCESS_2_1,(lambda (lambda (index (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) $1) $0))),-12.523738,0.000000
+train,train_task_00310__LIST_LIST_COUNT_>0_1_ACCESS_2_0,(lambda (lambda (index (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) $0) $1))),-12.523738,0.000000
+train,train_task_00316__LIST_LIST_COUNT_EVEN_1_ACCESS_2_0,(lambda (lambda (index (#(lambda (length (#(filter (lambda (gt? $0 0))) $0))) (cdr $0)) $1))),-15.873513,0.000000
+train,train_task_00397__LIST_LIST_HEAD_0_ACCESS_2_1,(lambda (lambda (index (car $1) $0))),-13.669605,0.000000
+train,train_task_00400__LIST_LIST_HEAD_1_ACCESS_2_0,(lambda (lambda (index (car $0) $1))),-13.669605,0.000000
+train,train_task_00403__LIST_LIST_INT_ACCESS_2_0_DROP_3_1,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00404__LIST_LIST_INT_ACCESS_2_0_TAKE_3_1,(lambda (lambda (lambda $1))),-2.979460,0.000000
+train,train_task_00405__LIST_LIST_INT_ACCESS_2_1_DROP_3_0,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00406__LIST_LIST_INT_ACCESS_2_1_TAKE_3_0,(lambda (lambda (lambda $2))),-2.979460,0.000000
+train,train_task_00427__LIST_LIST_INT_ZIPWITH_*_0_1_DROP_2_3,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00429__LIST_LIST_INT_ZIPWITH_*_1_0_ACCESS_2_3,(lambda (lambda (lambda (* (#(lambda (car (#(filter (lambda (gt? 1 $0))) $0))) (sort $1)) (#(lambda (car (reverse (sort $0)))) $2))))),-17.600279,0.000000
+train,train_task_00430__LIST_LIST_INT_ZIPWITH_*_1_0_DROP_2_3,(lambda (lambda (lambda empty))),-2.149294,0.000000
+train,train_task_00432__LIST_LIST_INT_ZIPWITH_+_0_1_ACCESS_2_3,(lambda (lambda (lambda (- (#(lambda (car (#(filter (lambda (gt? 1 $0))) $0))) (reverse $1)) (#(lambda (car (reverse (sort $0)))) $1))))),-17.699162,0.000000

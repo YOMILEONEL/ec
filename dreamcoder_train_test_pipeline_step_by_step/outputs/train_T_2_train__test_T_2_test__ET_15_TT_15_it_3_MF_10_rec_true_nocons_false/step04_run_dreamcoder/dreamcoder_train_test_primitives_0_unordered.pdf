@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	f0 [label=<f0=(λ (x) (filter (λ (y) <br /> (gt? x y))))>]
+	f1 [label=<f1=(λ (x) (car (sort x)))>]
+	f2 [label=<f2=(map (λ (x) (* x x)))>]
+	f3 [label=<f3=(f0 0)>]
+	f4 [label=<f4=(filter (λ (x) (gt? x <br /> 0)))>]
+	f5 [label=<f5=(map (λ (x) (* 4 x)))>]
+	f6 [label=<f6=(filter (λ (x) (gt? (mod <br /> x 2) 0)))>]
+	f8 [label=<f8=(λ (x) (f7 (sort x)))>]
+	f9 [label=<f9=(map (λ (x) (negate x)))>]
+	f10 [label=<f10=(λ (x y) (map (λ (z) 0) (f0 <br /> x (mapi (λ (u v) u) y))))>]
+	f7 [label=<f7=(λ (x) (car (reverse <br /> x)))>]
+	f0 -> f3
+	f7 -> f8
+	f0 -> f10
+}

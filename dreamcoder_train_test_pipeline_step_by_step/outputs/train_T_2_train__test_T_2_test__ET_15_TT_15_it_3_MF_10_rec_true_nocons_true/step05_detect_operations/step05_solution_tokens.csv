@@ -1,0 +1,16 @@
+token,count
+*,12
++,3
+-,3
+car,1
+empty,4
+filter,11
+gt?,11
+index,2
+length,5
+map,22
+mapi,3
+mod,1
+negate,2
+reverse,9
+sort,2

@@ -1,0 +1,14 @@
+token,count
+*,7
++,1
+-,2
+empty,4
+filter,16
+gt?,9
+index,2
+length,4
+map,10
+mapi,5
+negate,5
+reducei,1
+reverse,7

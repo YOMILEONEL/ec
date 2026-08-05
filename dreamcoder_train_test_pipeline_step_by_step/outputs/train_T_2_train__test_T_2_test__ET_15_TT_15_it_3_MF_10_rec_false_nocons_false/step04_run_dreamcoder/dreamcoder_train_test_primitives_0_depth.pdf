@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=RL]
+	subgraph cluster_1 {
+		graph [rank=same]
+		f0 [label=<f0=(mapi (λ (x y) (negate <br /> y)))>]
+		f1 [label=<f1=(λ (x) (car (reverse <br /> (sort x))))>]
+		f2 [label=<f2=(filter (λ (x) (gt? 1 <br /> x)))>]
+		f3 [label=<f3=(filter (λ (x) (gt? x <br /> 0)))>]
+	}
+}
