@@ -396,11 +396,11 @@ Berechnet werden:
 Accuracy
 normalized_operation_score
 normalized_position_score
-normalized_order_score
+normalized_sequence_score
 normalized_edit_score
 abstract_operation_score
 abstract_position_score
-abstract_order_score
+abstract_sequence_score
 abstract_edit_score
 ```
 

@@ -47,7 +47,7 @@ def longest_common_block_length(reference, generated):
         prev = cur
     return best
 
-def order_score(reference, generated):
+def sequence_score(reference, generated):
     if not reference and not generated:
         return 1.0
     if not reference or not generated:
@@ -73,7 +73,7 @@ def edit_score(reference, generated):
 def add_metrics(row, prefix, ref, sol):
     row[f"{prefix}_operation_score"] = operation_score(ref, sol)
     row[f"{prefix}_position_score"] = position_score(ref, sol)
-    row[f"{prefix}_order_score"] = order_score(ref, sol)
+    row[f"{prefix}_sequence_score"] = sequence_score(ref, sol)
     row[f"{prefix}_edit_score"] = edit_score(ref, sol)
     row[f"{prefix}_token_edit_distance"] = edit_distance(ref, sol)
     row[f"{prefix}_longest_common_block_length"] = longest_common_block_length(ref, sol)
@@ -110,7 +110,7 @@ summary = {
     "abstract_exact_matches": int(sum(int(float(r.get("abstract_exact_match", 0) or 0)) for r in rows)),
 }
 for prefix in ["normalized", "abstract"]:
-    for metric in ["operation_score", "position_score", "order_score", "edit_score"]:
+    for metric in ["operation_score", "position_score", "sequence_score", "edit_score"]:
         summary[f"{prefix}_{metric}_mean"] = mean(f"{prefix}_{metric}")
         summary[f"{prefix}_{metric}_mean_solved_only"] = mean(f"{prefix}_{metric}", lambda r: float(r.get("accuracy", 0) or 0) == 1.0)
 

@@ -18,27 +18,27 @@ Abstract exact matches: 0
 Normalized metrics over all test tasks:
   operation_score: 0.008177
   position_score: 0.003367
-  order_score: 0.008177
+  sequence_score: 0.008177
   edit_score: 0.003367
 Normalized metrics over solved test tasks only:
   operation_score: 0.032381
   position_score: 0.013333
-  order_score: 0.032381
+  sequence_score: 0.032381
   edit_score: 0.013333
 
 Abstract metrics over all test tasks:
   operation_score: 0.048172
   position_score: 0.020202
-  order_score: 0.039995
+  sequence_score: 0.039995
   edit_score: 0.034945
 Abstract metrics over solved test tasks only:
   operation_score: 0.190762
   position_score: 0.080000
-  order_score: 0.158381
+  sequence_score: 0.158381
   edit_score: 0.138381
 
 Generated files:
-/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false/step08_summarize_results/dreamcoder_test_results_complete.csv
-/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false/step08_summarize_results/dreamcoder_test_solved_tasks.csv
-/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false/step08_summarize_results/dreamcoder_test_unsolved_tasks.csv
-/mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step/outputs/train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false/step07_calculate_metrics/step07_metrics_summary.json
+C:\BA\ec\dreamcoder_train_test_pipeline_step_by_step\outputs\train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false\step08_summarize_results\dreamcoder_test_results_complete.csv
+C:\BA\ec\dreamcoder_train_test_pipeline_step_by_step\outputs\train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false\step08_summarize_results\dreamcoder_test_solved_tasks.csv
+C:\BA\ec\dreamcoder_train_test_pipeline_step_by_step\outputs\train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false\step08_summarize_results\dreamcoder_test_unsolved_tasks.csv
+C:\BA\ec\dreamcoder_train_test_pipeline_step_by_step\outputs\train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false\step07_calculate_metrics\step07_metrics_summary.json

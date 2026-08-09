@@ -56,10 +56,10 @@ lines.append(f"Abstract exact matches: {metrics_summary.get('abstract_exact_matc
 lines.append("")
 for prefix in ["normalized", "abstract"]:
     lines.append(prefix.capitalize() + " metrics over all test tasks:")
-    for metric in ["operation_score", "position_score", "order_score", "edit_score"]:
+    for metric in ["operation_score", "position_score", "sequence_score", "edit_score"]:
         lines.append(f"  {metric}: {metrics_summary.get(prefix + '_' + metric + '_mean'):.6f}")
     lines.append(prefix.capitalize() + " metrics over solved test tasks only:")
-    for metric in ["operation_score", "position_score", "order_score", "edit_score"]:
+    for metric in ["operation_score", "position_score", "sequence_score", "edit_score"]:
         lines.append(f"  {metric}: {metrics_summary.get(prefix + '_' + metric + '_mean_solved_only'):.6f}")
     lines.append("")
 lines.append("Generated files:")
