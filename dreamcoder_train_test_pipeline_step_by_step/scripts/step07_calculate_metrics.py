@@ -19,64 +19,141 @@ def read_rows(path):
 def parse_tokens(value):
     return [t.strip() for t in str(value or "").split(",") if t.strip()]
 
-def operation_score(reference, generated):
-    if not reference and not generated:
-        return 1.0
-    if not reference or not generated:
-        return 0.0
-    return sum((Counter(reference) & Counter(generated)).values()) / max(len(reference), len(generated))
+def program_operation_score(reference_tokens, generated_tokens):
+    """
+    Measures whether the same operations/tokens occur,
+    independent of their position.
 
-def position_score(reference, generated):
-    if not reference and not generated:
-        return 1.0
-    if not reference or not generated:
-        return 0.0
-    return sum(a == b for a, b in zip(reference, generated)) / max(len(reference), len(generated))
+    It uses multiset overlap, so repeated operations are handled correctly.
 
-def longest_common_block_length(reference, generated):
-    if not reference or not generated:
+    Shared implementation, identical in the DeepCoder pipeline's
+    compute_metrics.py - keep both in sync.
+    """
+    if not reference_tokens and not generated_tokens:
+        return 0.0
+    if not reference_tokens or not generated_tokens:
+        return 0.0
+
+    ref_counter = Counter(reference_tokens)
+    gen_counter = Counter(generated_tokens)
+
+    overlap = 0
+    for token in ref_counter:
+        overlap += min(ref_counter[token], gen_counter.get(token, 0))
+
+    return overlap / max(len(reference_tokens), len(generated_tokens))
+
+def program_position_score(reference_tokens, generated_tokens):
+    """
+    Measures how many tokens are equal at the same position.
+
+    Shared implementation, identical in the DeepCoder pipeline's
+    compute_metrics.py - keep both in sync.
+    """
+    if not reference_tokens and not generated_tokens:
+        return 0.0
+    if not reference_tokens or not generated_tokens:
+        return 0.0
+
+    matches = 0
+    for i in range(min(len(reference_tokens), len(generated_tokens))):
+        if reference_tokens[i] == generated_tokens[i]:
+            matches += 1
+
+    return matches / max(len(reference_tokens), len(generated_tokens))
+
+def longest_common_contiguous_length(reference_tokens, generated_tokens):
+    """
+    Longest common contiguous token block.
+
+    Shared implementation, identical in the DeepCoder pipeline's
+    compute_metrics.py - keep both in sync.
+    """
+    if not reference_tokens or not generated_tokens:
         return 0
-    prev = [0] * (len(generated) + 1)
+
+    dp = [[0] * (len(generated_tokens) + 1) for _ in range(len(reference_tokens) + 1)]
     best = 0
-    for i in range(1, len(reference) + 1):
-        cur = [0] * (len(generated) + 1)
-        for j in range(1, len(generated) + 1):
-            if reference[i - 1] == generated[j - 1]:
-                cur[j] = prev[j - 1] + 1
-                best = max(best, cur[j])
-        prev = cur
+
+    for i in range(1, len(reference_tokens) + 1):
+        for j in range(1, len(generated_tokens) + 1):
+            if reference_tokens[i - 1] == generated_tokens[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
+                best = max(best, dp[i][j])
+
     return best
 
-def sequence_score(reference, generated):
-    if not reference and not generated:
-        return 1.0
-    if not reference or not generated:
-        return 0.0
-    return longest_common_block_length(reference, generated) / max(len(reference), len(generated))
+def program_sequence_score(reference_tokens, generated_tokens):
+    """
+    Measures whether the relative order of tokens is preserved.
+    Based on normalized Longest Common contiguous token block.
 
-def edit_distance(reference, generated):
-    prev = list(range(len(generated) + 1))
-    for i, a in enumerate(reference, 1):
-        cur = [i]
-        for j, b in enumerate(generated, 1):
-            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a != b)))
-        prev = cur
-    return prev[-1]
-
-def edit_score(reference, generated):
-    if not reference and not generated:
-        return 1.0
-    if not reference or not generated:
+    Shared implementation, identical in the DeepCoder pipeline's
+    compute_metrics.py - keep both in sync.
+    """
+    if not reference_tokens and not generated_tokens:
         return 0.0
-    return 1 - edit_distance(reference, generated) / max(len(reference), len(generated))
+    if not reference_tokens or not generated_tokens:
+        return 0.0
+
+    lccl = longest_common_contiguous_length(reference_tokens, generated_tokens)
+    return lccl / max(len(reference_tokens), len(generated_tokens))
+
+def levenshtein_distance(reference_tokens, generated_tokens):
+    """
+    Computes token-level Levenshtein distance.
+
+    Shared implementation, identical in the DeepCoder pipeline's
+    compute_metrics.py - keep both in sync.
+    """
+    n = len(reference_tokens)
+    m = len(generated_tokens)
+
+    dp = [[0] * (m + 1) for _ in range(n + 1)]
+
+    for i in range(n + 1):
+        dp[i][0] = i
+
+    for j in range(m + 1):
+        dp[0][j] = j
+
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            cost = 0 if reference_tokens[i - 1] == generated_tokens[j - 1] else 1
+
+            dp[i][j] = min(
+                dp[i - 1][j] + 1,       # deletion
+                dp[i][j - 1] + 1,       # insertion
+                dp[i - 1][j - 1] + cost # substitution
+            )
+
+    return dp[n][m]
+
+def program_edit_score(reference_tokens, generated_tokens):
+    """
+    Converts edit distance into a similarity score in [0, 1].
+    1 means identical programs.
+    0 means maximally different according to normalized edit distance.
+
+    Shared implementation, identical in the DeepCoder pipeline's
+    compute_metrics.py - keep both in sync.
+    """
+    if not reference_tokens and not generated_tokens:
+        return 0.0
+    if not reference_tokens or not generated_tokens:
+        return 0.0
+
+    max_len = max(len(reference_tokens), len(generated_tokens))
+    distance = levenshtein_distance(reference_tokens, generated_tokens)
+    return 1.0 - (distance / max_len)
 
 def add_metrics(row, prefix, ref, sol):
-    row[f"{prefix}_operation_score"] = operation_score(ref, sol)
-    row[f"{prefix}_position_score"] = position_score(ref, sol)
-    row[f"{prefix}_sequence_score"] = sequence_score(ref, sol)
-    row[f"{prefix}_edit_score"] = edit_score(ref, sol)
-    row[f"{prefix}_token_edit_distance"] = edit_distance(ref, sol)
-    row[f"{prefix}_longest_common_block_length"] = longest_common_block_length(ref, sol)
+    row[f"{prefix}_operation_score"] = program_operation_score(ref, sol)
+    row[f"{prefix}_position_score"] = program_position_score(ref, sol)
+    row[f"{prefix}_sequence_score"] = program_sequence_score(ref, sol)
+    row[f"{prefix}_edit_score"] = program_edit_score(ref, sol)
+    row[f"{prefix}_token_edit_distance"] = levenshtein_distance(ref, sol)
+    row[f"{prefix}_longest_common_block_length"] = longest_common_contiguous_length(ref, sol)
 
 rows = read_rows(input_csv)
 for row in rows:
