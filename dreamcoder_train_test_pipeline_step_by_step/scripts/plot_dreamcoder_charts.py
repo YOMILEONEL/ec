@@ -1,5 +1,5 @@
 """Regenerate the two DreamCoder comparison charts with the thesis's own
-short metric names (Solve Rate/POS/PPS/PSS/PES). Values are loaded directly
+short metric names (BSS/POS/PPS/PSS/PES). Values are loaded directly
 from each configuration's step07_metrics_summary.json (abstract_* fields)
 rather than hardcoded, so the charts can never drift out of sync with the
 actual computed metrics the way a copy-pasted literal can. DreamCoder is a
@@ -68,9 +68,9 @@ def bar_chart(labels, series_by_config, title, ylim, outpath):
 
 def main():
     solve_rate, all_task, solved_only = load_series()
-    main_series = {"Solve Rate": solve_rate, **all_task}
+    main_series = {"BSS": solve_rate, **all_task}
     bar_chart(
-        ["Solve Rate", "POS", "PPS", "PSS", "PES"], main_series,
+        ["BSS", "POS", "PPS", "PSS", "PES"], main_series,
         "DreamCoder Metrics by Configuration (500 training tasks, 3 iterations)",
         0.45, IMAGES_DIR / "dreamcoder_metric_comparison.png",
     )
