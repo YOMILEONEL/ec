@@ -124,17 +124,166 @@ def tokenize_reference(program):
     return tokens
 
 
-def tokenize_solution(program):
-    tokens = []
-    unknown = []
-    for raw in TOKEN_RE.findall(str(program or "")):
-        if raw in IGNORED_SOLUTION_TOKENS or re.fullmatch(r"\d+|\$\d+", raw):
-            continue
-        mapped = SOLUTION_TOKEN_MAP.get(raw)
+SEXPR_TOKEN_RE = re.compile(r"\(|\)|[^\s()]+")
+
+MAP_MULT_LABELS = {"2": "MAP_MULT2", "3": "MAP_MULT3", "4": "MAP_MULT4"}
+MAP_DIV_LABELS = {"2": "MAP_DIV2", "3": "MAP_DIV3", "4": "MAP_DIV4"}
+
+
+def _is_var(x):
+    return isinstance(x, str) and x.startswith("$")
+
+
+def _parse_sexpr(text):
+    """Parses a DreamCoder program string into nested lists of atoms.
+    Invented-primitive markers ('#') carry no structural meaning, since
+    DreamCoder's own serialization already inlines the invented body, so
+    they are stripped before parsing.
+    """
+    tokens = SEXPR_TOKEN_RE.findall(text.replace("#", ""))
+    pos = [0]
+
+    def parse_one():
+        tok = tokens[pos[0]]
+        if tok == "(":
+            pos[0] += 1
+            items = []
+            while pos[0] < len(tokens) and tokens[pos[0]] != ")":
+                items.append(parse_one())
+            pos[0] += 1
+            return items
+        pos[0] += 1
+        return tok
+
+    forms = []
+    while pos[0] < len(tokens):
+        forms.append(parse_one())
+    return forms
+
+
+def _unwrap_lambdas(node):
+    while isinstance(node, list) and node and node[0] == "lambda":
+        node = node[1]
+    return node
+
+
+def _classify_map_body(body):
+    if not isinstance(body, list) or not body:
+        return None
+    op, args = body[0], body[1:]
+    if op == "negate" and len(args) == 1 and _is_var(args[0]):
+        return "MAP_NEGATE"
+    if op == "*" and len(args) == 2:
+        a, b = args
+        if _is_var(a) and _is_var(b) and a == b:
+            return "MAP_SQUARE"
+        if _is_var(a) and isinstance(b, str) and b in MAP_MULT_LABELS:
+            return MAP_MULT_LABELS[b]
+        if _is_var(b) and isinstance(a, str) and a in MAP_MULT_LABELS:
+            return MAP_MULT_LABELS[a]
+    if op == "/" and len(args) == 2:
+        a, b = args
+        if _is_var(a) and isinstance(b, str) and b in MAP_DIV_LABELS:
+            return MAP_DIV_LABELS[b]
+    if op == "+" and len(args) == 2:
+        a, b = args
+        if (_is_var(a) and b == "1") or (_is_var(b) and a == "1"):
+            return "MAP_INCREMENT"
+    if op == "-" and len(args) == 2:
+        a, b = args
+        if _is_var(a) and b == "1":
+            return "MAP_DECREMENT"
+    return None
+
+
+def _classify_mod2(node):
+    if not isinstance(node, list) or len(node) != 3:
+        return False
+    op, a, b = node
+    return op == "mod" and _is_var(a) and b == "2"
+
+
+def _classify_filter_body(body):
+    if not isinstance(body, list) or not body:
+        return None
+    op, args = body[0], body[1:]
+    if op == "gt?" and len(args) == 2:
+        a, b = args
+        if _is_var(a) and b == "0":
+            return "FILTER_POS"
+        if a == "0" and _is_var(b):
+            return "FILTER_NEG"
+        if isinstance(a, list) and _classify_mod2(a) and b == "0":
+            return "FILTER_ODD"
+    if op == "eq?" and len(args) == 2:
+        a, b = args
+        if isinstance(a, list) and _classify_mod2(a) and b == "0":
+            return "FILTER_EVEN"
+        if isinstance(a, list) and _classify_mod2(a) and b == "1":
+            return "FILTER_ODD"
+        if isinstance(b, list) and _classify_mod2(b) and a == "0":
+            return "FILTER_EVEN"
+        if isinstance(b, list) and _classify_mod2(b) and a == "1":
+            return "FILTER_ODD"
+    if op == "not" and len(args) == 1:
+        inner = _classify_filter_body(args[0])
+        if inner == "FILTER_EVEN":
+            return "FILTER_ODD"
+        if inner == "FILTER_ODD":
+            return "FILTER_EVEN"
+    return None
+
+
+HIGHER_ORDER_CLASSIFIERS = {
+    "map": _classify_map_body,
+    "mapi": _classify_map_body,
+    "filter": _classify_filter_body,
+}
+
+
+def _walk(node, tokens, unknown):
+    if isinstance(node, str):
+        if node in IGNORED_SOLUTION_TOKENS or re.fullmatch(r"\d+|\$\d+", node):
+            return
+        mapped = SOLUTION_TOKEN_MAP.get(node)
         if mapped is None:
-            unknown.append(raw)
+            unknown.append(node)
         else:
             tokens.append(mapped)
+        return
+    if not isinstance(node, list) or not node:
+        return
+    head = node[0]
+    classifier = HIGHER_ORDER_CLASSIFIERS.get(head) if isinstance(head, str) else None
+    if classifier is not None and len(node) >= 2 and isinstance(node[1], list) and node[1] and node[1][0] == "lambda":
+        lambda_body = _unwrap_lambdas(node[1])
+        fused = classifier(lambda_body)
+        if fused is not None:
+            tokens.append(fused)
+        else:
+            tokens.append(SOLUTION_TOKEN_MAP[head])
+            _walk(lambda_body, tokens, unknown)
+        for child in node[2:]:
+            _walk(child, tokens, unknown)
+        return
+    _walk(head, tokens, unknown)
+    for child in node[1:]:
+        _walk(child, tokens, unknown)
+
+
+def tokenize_solution(program):
+    """Tokenizes a DreamCoder solution, fusing a higher-order call (map/mapi/
+    filter) with the scalar operation or predicate in its lambda argument
+    into a single token (e.g. MAP_MULT2, FILTER_POS), mirroring how
+    tokenize_reference() fuses operation and parameter for the same DSL
+    families. Without this, a semantically parameter-fused reference token
+    like MAP_MULT2 could never appear in the solution's token stream at all,
+    since the solution would always carry the operator as a separate token.
+    """
+    tokens = []
+    unknown = []
+    for form in _parse_sexpr(str(program or "")):
+        _walk(form, tokens, unknown)
     return tokens, unknown
 
 
@@ -143,6 +292,10 @@ def solution_abstract(token):
         return "ARITH"
     if token == "PREDICATE":
         return "PREDICATE"
+    if token.startswith("MAP"):
+        return "MAP"
+    if token.startswith("FILTER"):
+        return "FILTER"
     return token
 
 

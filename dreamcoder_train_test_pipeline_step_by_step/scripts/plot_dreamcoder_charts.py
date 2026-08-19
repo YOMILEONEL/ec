@@ -1,11 +1,12 @@
 """Regenerate the two DreamCoder comparison charts with the thesis's own
-short metric names (BSS/POS/PPS/PSS/PES) instead of the old pipeline names
-(Accuracy, ProgramOperationScore, ...), matching the terminology fix already
-applied to the DeepCoder charts. The underlying numbers are unchanged and
-match Tables 6.1-6.5 in Results.tex exactly (DreamCoder is a single run per
-configuration; its seed parameter has no effect under this thesis's
-configuration, see Evaluation.tex's Hyperparameters section).
+short metric names (Solve Rate/POS/PPS/PSS/PES). Values are loaded directly
+from each configuration's step07_metrics_summary.json (abstract_* fields)
+rather than hardcoded, so the charts can never drift out of sync with the
+actual computed metrics the way a copy-pasted literal can. DreamCoder is a
+single run per configuration; its seed parameter has no effect under this
+thesis's configuration, see Evaluation.tex's Hyperparameters section.
 """
+import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -14,22 +15,29 @@ import numpy as np
 CONFIGS = ["Consolidation", "Recognition", "Combined"]
 COLORS = ["tab:blue", "tab:orange", "tab:green"]
 
-# All-task values (solve rate as a fraction, then POS/PPS/PSS/PES all-task means).
-SOLVE_RATE = [0.253, 0.313, 0.343]
-ALL_TASK = {
-    "POS": [0.048, 0.063, 0.055],
-    "PPS": [0.020, 0.017, 0.031],
-    "PSS": [0.040, 0.052, 0.046],
-    "PES": [0.035, 0.046, 0.049],
+RUN_DIRS = {
+    "Consolidation": "train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false",
+    "Recognition": "train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_true_nocons_true",
+    "Combined": "train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_true_nocons_false",
 }
-SOLVED_ONLY = {
-    "POS": [0.191, 0.202, 0.160],
-    "PPS": [0.080, 0.053, 0.092],
-    "PSS": [0.158, 0.165, 0.133],
-    "PES": [0.138, 0.148, 0.143],
-}
+OUTPUTS_DIR = Path(__file__).resolve().parent.parent / "outputs"
 
 IMAGES_DIR = Path("C:/Users/Lenovo PC/Downloads/Bachelorarbeit/repo/bachelorarbeit/arbeit/Latex_Template/Template 4/images")
+
+
+def load_summary(config):
+    p = OUTPUTS_DIR / RUN_DIRS[config] / "step07_calculate_metrics" / "step07_metrics_summary.json"
+    with p.open(encoding="utf-8") as f:
+        return json.load(f)
+
+
+def load_series():
+    summaries = {c: load_summary(c) for c in CONFIGS}
+    solve_rate = [summaries[c]["test_accuracy"] for c in CONFIGS]
+    metric_keys = {"POS": "operation_score", "PPS": "position_score", "PSS": "sequence_score", "PES": "edit_score"}
+    all_task = {m: [summaries[c][f"abstract_{key}_mean"] for c in CONFIGS] for m, key in metric_keys.items()}
+    solved_only = {m: [summaries[c][f"abstract_{key}_mean_solved_only"] for c in CONFIGS] for m, key in metric_keys.items()}
+    return solve_rate, all_task, solved_only
 
 
 def bar_chart(labels, series_by_config, title, ylim, outpath):
@@ -59,14 +67,15 @@ def bar_chart(labels, series_by_config, title, ylim, outpath):
 
 
 def main():
-    main_series = {"BSS": SOLVE_RATE, **ALL_TASK}
+    solve_rate, all_task, solved_only = load_series()
+    main_series = {"Solve Rate": solve_rate, **all_task}
     bar_chart(
-        ["BSS", "POS", "PPS", "PSS", "PES"], main_series,
+        ["Solve Rate", "POS", "PPS", "PSS", "PES"], main_series,
         "DreamCoder Metrics by Configuration (500 training tasks, 3 iterations)",
         0.45, IMAGES_DIR / "dreamcoder_metric_comparison.png",
     )
     bar_chart(
-        ["POS", "PPS", "PSS", "PES"], SOLVED_ONLY,
+        ["POS", "PPS", "PSS", "PES"], solved_only,
         "DreamCoder Structural Metrics by Configuration (solved tasks only)",
         0.30, IMAGES_DIR / "dreamcoder_metric_comparison_solved.png",
     )
