@@ -16,26 +16,26 @@ Normalized exact matches: 0
 Abstract exact matches: 0
 
 Normalized metrics over all test tasks:
-  operation_score: 0.008177
-  position_score: 0.003367
-  sequence_score: 0.008177
-  edit_score: 0.003367
+  operation_score: 0.044613
+  position_score: 0.020202
+  sequence_score: 0.037037
+  edit_score: 0.022727
 Normalized metrics over solved test tasks only:
-  operation_score: 0.032381
-  position_score: 0.013333
-  sequence_score: 0.032381
-  edit_score: 0.013333
+  operation_score: 0.176667
+  position_score: 0.080000
+  sequence_score: 0.146667
+  edit_score: 0.090000
 
 Abstract metrics over all test tasks:
-  operation_score: 0.048172
-  position_score: 0.020202
-  sequence_score: 0.039995
-  edit_score: 0.034945
+  operation_score: 0.063973
+  position_score: 0.027778
+  sequence_score: 0.053872
+  edit_score: 0.032828
 Abstract metrics over solved test tasks only:
-  operation_score: 0.190762
-  position_score: 0.080000
-  sequence_score: 0.158381
-  edit_score: 0.138381
+  operation_score: 0.253333
+  position_score: 0.110000
+  sequence_score: 0.213333
+  edit_score: 0.130000
 
 Generated files:
 C:\BA\ec\dreamcoder_train_test_pipeline_step_by_step\outputs\train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false\step08_summarize_results\dreamcoder_test_results_complete.csv

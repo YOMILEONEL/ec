@@ -12,30 +12,30 @@ Test tasks: 99
 Solved test tasks: 31
 Accuracy: 0.313131
 Trivial solutions: 4
-Normalized exact matches: 0
-Abstract exact matches: 0
+Normalized exact matches: 1
+Abstract exact matches: 1
 
 Normalized metrics over all test tasks:
-  operation_score: 0.012626
-  position_score: 0.000000
-  sequence_score: 0.012626
-  edit_score: 0.009259
+  operation_score: 0.058923
+  position_score: 0.013468
+  sequence_score: 0.045455
+  edit_score: 0.023569
 Normalized metrics over solved test tasks only:
-  operation_score: 0.040323
-  position_score: 0.000000
-  sequence_score: 0.040323
-  edit_score: 0.029570
+  operation_score: 0.188172
+  position_score: 0.043011
+  sequence_score: 0.145161
+  edit_score: 0.075269
 
 Abstract metrics over all test tasks:
-  operation_score: 0.063300
-  position_score: 0.016667
-  sequence_score: 0.051515
-  edit_score: 0.046465
+  operation_score: 0.085017
+  position_score: 0.026094
+  sequence_score: 0.071549
+  edit_score: 0.044613
 Abstract metrics over solved test tasks only:
-  operation_score: 0.202151
-  position_score: 0.053226
-  sequence_score: 0.164516
-  edit_score: 0.148387
+  operation_score: 0.271505
+  position_score: 0.083333
+  sequence_score: 0.228495
+  edit_score: 0.142473
 
 Generated files:
 C:\BA\ec\dreamcoder_train_test_pipeline_step_by_step\outputs\train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_true_nocons_true\step08_summarize_results\dreamcoder_test_results_complete.csv
