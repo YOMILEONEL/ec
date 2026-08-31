@@ -1,4 +1,4 @@
-# DreamCoder Train/Test Pipeline Robust
+# DreamCoder Train/Test Pipeline (Step by Step)
 
 Diese Pipeline führt eine saubere DreamCoder-Auswertung mit getrenntem Trainings- und Testdatensatz durch.
 
@@ -15,21 +15,24 @@ Die Pipeline wurde gegenüber der vorherigen Version robuster gemacht. Der wicht
 ## 1. Ordnerstruktur
 
 ```text
-dreamcoder_train_test_pipeline_robust/
+dreamcoder_train_test_pipeline_step_by_step/
 ├── dataset/
 │   ├── README_dataset.md
 │   ├── T=1_train.json
 │   ├── T=1_test.json
+│   ├── T=2_train.json
 │   └── T=2_test.json
 ├── scripts/
 │   ├── step01_validate_datasets.py
 │   ├── step02_convert_train_test_tasks.py
 │   ├── step03_create_dreamcoder_task_pickles.py
 │   ├── step04_run_dreamcoder_train_test.py
+│   ├── step04_deepcoder_primitives.py
 │   ├── step05_detect_operations.py
 │   ├── step06_normalize_programs.py
 │   ├── step07_calculate_metrics.py
-│   └── step08_summarize_results.py
+│   ├── step08_summarize_results.py
+│   └── plot_dreamcoder_charts.py
 ├── outputs/
 ├── run_all.sh
 ├── README.md
@@ -83,7 +86,7 @@ dataset/T=2_test.json
 In der ZIP kann `T=2_train.json` fehlen, weil diese Datei groß sein kann. Kopiere sie dann in den Pipeline-Ordner:
 
 ```bash
-cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_robust
+cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step
 cp /mnt/c/BA/deepcoder/dataset/T=2_train.json dataset/T=2_train.json
 ```
 
@@ -109,7 +112,7 @@ Wichtig: Die JSON-Dateien enthalten PBE-Listenaufgaben mit Referenzprogrammen un
 Starte zuerst einen kleinen, schnellen Lauf. Damit prüfst du, ob alle Schritte funktionieren:
 
 ```bash
-cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_robust
+cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step
 
 MAX_TRAIN_TASKS=100 \
 TRAIN_DATASET_FILE=dataset/T=2_train.json \
@@ -134,7 +137,7 @@ Dieser Lauf ist nur ein Funktionstest. Er soll nicht als finale Modellleistung i
 Wenn der kleine Lauf funktioniert, starte einen mittleren Lauf:
 
 ```bash
-cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_robust
+cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step
 
 MAX_TRAIN_TASKS=300 \
 TRAIN_DATASET_FILE=dataset/T=2_train.json \
@@ -171,7 +174,7 @@ Grammar-Konsolidierung deaktiviert
 Erst wenn die kleinen Läufe stabil sind:
 
 ```bash
-cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_robust
+cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step
 
 MAX_TRAIN_TASKS=0 \
 TRAIN_DATASET_FILE=dataset/T=2_train.json \
@@ -206,6 +209,15 @@ bash run_all.sh
 | `DREAMCODER_NO_CONSOLIDATION` | Grammar-Konsolidierung deaktivieren/aktivieren |
 | `DREAMCODER_CPUS` | Anzahl CPUs, die an DreamCoder übergeben wird |
 | `MAX_TRAIN_TASKS` | Anzahl Trainingsaufgaben; `0` bedeutet alle |
+| `DREAMCODER_ARITY` | maximale Arity neu erfundener Library-Funktionen bei der Konsolidierung (Default `3`; `ecIterator` selbst würde mit `0` starten, was parametrisierte Erfindungen blockiert) |
+| `DREAMCODER_PSEUDOCOUNTS` | Pseudocounts für die Grammar-Wahrscheinlichkeiten bei der Konsolidierung |
+| `DREAMCODER_AIC` | Akaike-Strafterm (AIC) bei der Konsolidierung |
+| `DREAMCODER_STRUCTURE_PENALTY` | Strukturstrafe für neu erfundene Library-Funktionen bei der Konsolidierung |
+| `DREAMCODER_TOPK` | Anzahl der pro Aufgabe für die Konsolidierung berücksichtigten Top-Lösungen |
+| `DREAMCODER_RECOGNITION_TIMEOUT` | eigenes Zeitbudget für das Training des Recognition Model (leer = fällt auf `DREAMCODER_TIMEOUT` zurück) |
+| `DREAMCODER_RECOGNITION_STEPS` | eigenes Schrittlimit für das Training des Recognition Model (leer = kein Limit) |
+
+Die Konsolidierungs-Parameter (`DREAMCODER_ARITY`, `DREAMCODER_PSEUDOCOUNTS`, `DREAMCODER_AIC`, `DREAMCODER_STRUCTURE_PENALTY`, `DREAMCODER_TOPK`) orientieren sich an den offiziellen List-Domain-Experimenten aus dem DreamCoder-Paper, nicht an den Defaults von `ecIterator` selbst.
 
 ---
 
@@ -284,6 +296,8 @@ outputs/<RUN_KEY>/step03_create_task_pickles/step03_task_pickle_summary.txt
 ### Step 04: `step04_run_dreamcoder_train_test.py`
 
 Das ist der wichtigste Schritt.
+
+Die Primitives kommen dabei nicht aus DreamCoders eigenem, bewusst minimalem `listPrimitives()` (dort sind `map`/`fold` auskommentiert und es gibt kein `zip`, weil DreamCoder diese Bausteine im Originalpaper über viele Konsolidierungs-Iterationen selbst wiederentdecken soll), sondern aus `step04_deepcoder_primitives.py`. Diese Datei stellt DreamCoder `map`/`filter`/`zip` & Co. direkt zur Verfügung, weil die Trainings- und Suchbudgets dieser Pipeline für eine echte Wiederentdeckung nicht ausreichen und der DeepCoder-Datensatz ohnehin genau diese Kombinatoren voraussetzt. Jedes dort definierte Primitive ist außerdem so benannt, dass es zur fest einkompilierten Namenstabelle des OCaml-Compressors passt; ein Primitive mit unbekanntem Namen lässt die Konsolidierung mit `safe_get_some failure` abstürzen, sobald eine damit gelöste Trainingsaufgabe komprimiert werden soll.
 
 Er macht:
 
@@ -377,6 +391,8 @@ Diese Version korrigiert außerdem den früheren Fehler, dass ungelöste Aufgabe
 trivial_solution = 1 nur wenn solved = true und die Lösung wirklich trivial ist
 ```
 
+Der Tokenizer für DreamCoder-Lösungen verschmilzt außerdem einen Aufruf höherer Ordnung (`map`/`mapi`/`filter`) mit der skalaren Operation bzw. dem Prädikat in seinem Lambda-Argument zu einem einzigen Token (z. B. `MAP_MULT2`, `FILTER_POS`), genau wie `reference_token()` Operation und Parameter auf der Referenzseite für dieselben DSL-Familien verschmilzt. Ohne diese Fusion könnte ein parametrisiertes Referenztoken wie `MAP_MULT2` im Lösungs-Tokenstrom nie auftauchen, weil dort der Operator immer als eigenes Token stünde, was POS/PPS/PSS/PES künstlich nach unten gedrückt hätte.
+
 Ergebnisse:
 
 ```text
@@ -436,12 +452,35 @@ outputs/<RUN_KEY>/step08_summarize_results/step08_summary.txt
 
 ---
 
+### Zusatz: `plot_dreamcoder_charts.py`
+
+Erzeugt die beiden DreamCoder-Vergleichsdiagramme direkt für die Bachelorarbeit, mit deren eigener Kurzbezeichnung der Metriken (BSS/POS/PPS/PSS/PES statt der internen Pipeline-Namen). Die Werte werden dafür nicht neu berechnet, sondern direkt aus den `step07_metrics_summary.json`-Dateien (Feld `abstract_*`) der drei für die Arbeit verwendeten Konfigurationen geladen, damit die Diagramme nie von den tatsächlich berechneten Metriken abweichen können. Geschrieben wird direkt in den Bilder-Ordner der englischen Thesis-Fassung (`Latex_Template/Template 4/images/`).
+
+Erwartet werden die drei Run-Ordner unter `outputs/`:
+
+| Konfiguration | `outputs/`-Ordner | `DREAMCODER_USE_RECOGNITION` | `DREAMCODER_NO_CONSOLIDATION` |
+|---|---|---|---|
+| Consolidation | `train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_false_nocons_false` | `false` | `false` |
+| Recognition | `train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_true_nocons_true` | `true` | `true` |
+| Combined | `train_T_2_train__test_T_2_test__ET_15_TT_15_it_3_MF_10_rec_true_nocons_false` | `true` | `false` |
+
+Ausführen:
+
+```bash
+cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step
+python scripts/plot_dreamcoder_charts.py
+```
+
+DreamCoder ist pro Konfiguration ein einzelner Lauf, kein Multi-Seed-Mittel wie bei DeepCoder; der Seed-Parameter hat unter dieser Konfiguration keinen Einfluss (siehe die Hyperparameter-Angaben im Evaluation-Kapitel der Arbeit).
+
+---
+
 ## 9. Ergebnis schnell anzeigen
 
 Nach einem Lauf:
 
 ```bash
-cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_robust
+cd /mnt/c/BA/ec/dreamcoder_train_test_pipeline_step_by_step
 LATEST=$(ls -td outputs/* | head -1)
 cat "$LATEST/step08_summarize_results/step08_summary.txt"
 ```
@@ -526,4 +565,18 @@ cat "$LATEST/step04_run_dreamcoder/step04_test_results.csv"
 ```
 
 Wenn HITs vorhanden sind, sollten die entsprechenden Aufgaben in `step04_test_results.csv` als `solved=True` stehen.
+
+---
+
+## 13. Ergebnisse der für die Arbeit zitierten Läufe
+
+Alle drei Läufe: `T=2_train`/`T=2_test`, `DREAMCODER_TIMEOUT=15`, `DREAMCODER_TESTING_TIMEOUT=15`, `DREAMCODER_ITERATIONS=3`, `DREAMCODER_FRONTIER_SIZE=10`, 99 Testaufgaben (siehe Tabelle bei `plot_dreamcoder_charts.py` oben für die jeweiligen `rec`/`nocons`-Flags und Run-Ordner).
+
+| Konfiguration | Solve-Rate | POS (alle / gelöst) | PPS (alle / gelöst) | PSS (alle / gelöst) | PES (alle / gelöst) |
+|---|---|---|---|---|---|
+| Consolidation | 25/99 (25,3 %) | 0,064 / 0,253 | 0,028 / 0,110 | 0,054 / 0,213 | 0,033 / 0,130 |
+| Recognition | 31/99 (31,3 %) | 0,085 / 0,272 | 0,026 / 0,083 | 0,072 / 0,228 | 0,045 / 0,142 |
+| Combined | 34/99 (34,3 %) | 0,079 / 0,230 | 0,049 / 0,142 | 0,071 / 0,206 | 0,064 / 0,186 |
+
+POS/PPS/PSS/PES sind hier die `abstract_*`-Metriken aus `step07_metrics_summary.json` (Operationsfamilien statt exakter Parameter, siehe Step 06). Diese Zahlen sind die Quelle für die entsprechende Tabelle und die beiden Diagramme in Kapitel 6 der Arbeit; bei einem erneuten Lauf mit denselben Umgebungsvariablen sollten sie sich reproduzieren lassen, DreamCoders Trainings-Randomness ausgenommen (Recognition-Modell-Initialisierung, kein separat gesetzter Seed).
 
